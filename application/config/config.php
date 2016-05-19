@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/pinoypapayat';
+$config['base_url'] = 'http://localhost/pinoypapayat/';
 
 $allowed_domains = array('localhost/pinoypapayat', 'localhost/pinoypapayat');
 $default_domain  = 'localhost/pinoypapayat';
