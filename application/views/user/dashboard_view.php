@@ -71,23 +71,6 @@
                         <a href="<?php echo base_url();?>user/profile"><i class="fa fa-fw fa-user"></i> Profile </a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> CMS <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="<?php echo base_url()."Admin/cms_home"?>">Home Page</a>
-                            </li>
-                            <li class="active">
-                                <a href="<?php echo base_url()."Admin/cms_about"?>" >About Page</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url()."Admin/cms_contacts"?>">Contacts Page</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url()."Admin/cms_posts"?>">Posts</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
                         <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
                     </li>
 
@@ -109,14 +92,14 @@
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-table"></i> 
+                                <i class="fa fa-table"></i>
                             </li>
                         </ol>
                     </div>
 
-                    
+
                     <div class="panel panel-default">
-                    
+
                         <div class="panel-body">
                         <div class="col-lg-12">
                         <input type="text" class="form-control" placeholder="Title">
@@ -140,15 +123,15 @@
                                     <h3>Sample Post Title</h3>
                                     <h6>Sample post Description</h6>
                                     <center><img src="<?php echo base_url();?>images/pic01.jpg" alt="Una"></center><br>
-                                    <p>Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. 
-                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. 
-                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. 
-                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. 
+                                    <p>Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
+                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
+                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
+                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
                                     Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. </p>
                                 </div>
                             </div>
                      </div>
-                    <div class="panel-footer"><center>- End -</center></div>        
+                    <div class="panel-footer"><center>- End -</center></div>
                     </div>
                 </div>
                 <!-- /.row -->

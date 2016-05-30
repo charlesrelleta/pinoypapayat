@@ -69,24 +69,7 @@
                     </li >
                     <li class="active">
                         <a href="<?php echo base_url();?>user/dashboard"><i class="fa fa-fw fa-user"></i> Profile </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> CMS <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="<?php echo base_url()."Admin/cms_home"?>">Home Page</a>
-                            </li>
-                            <li class="active">
-                                <a href="<?php echo base_url()."Admin/cms_about"?>" >About Page</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url()."Admin/cms_contacts"?>">Contacts Page</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url()."Admin/cms_posts"?>">Posts</a>
-                            </li>
-                        </ul>
-                    </li>
+                    </li>                    
                     <li>
                         <a href="#"><i class="fa fa-fw fa-file"></i> Blank Page</a>
                     </li>
@@ -107,7 +90,7 @@
                     <div class="row">
                         <div class="col-lg-16" >
                             <h4 class="page-header">
-                                Profile 
+                                Profile
                             </h4>
                             <br>
                                 <div style="padding-left: 7.0em; ">
@@ -151,8 +134,8 @@
                                     <br>
                                     <div style="padding-left: 7.0em; ">
                                         <table  class="table-condensed"  width="40%" border="0" >
-                                    
-                                      
+
+
                                             <tr>
                                                 <td>Email Address</td>
                                                 <td>juandelaccruz@email.com</td>
@@ -179,7 +162,7 @@
                                                 <td>Password</td>
                                                <td>*********** &nbsp; <a href="" >[ Change ]</a></td>
                                             </tr>
-                                        
+
                                 </table>
 
                             </div>
@@ -192,7 +175,7 @@
             </div>
         <!-- /#page-wrapper -->
         <footer>
-        
+
         <div class="row">
                     <div class="col-lg-19" >
                         <hr>
@@ -203,7 +186,7 @@
         </div>
     <!-- /#wrapper -->
 
-    
+
 
 
     <!-- jQuery -->
