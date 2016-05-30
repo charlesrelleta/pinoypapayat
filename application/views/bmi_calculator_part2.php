@@ -23,37 +23,39 @@
 	</head>
 	<body class="landing">
 
-		<!-- Header -->
-			<header id="header" class="alt">
-				<h1><strong><a href="index.html">PinoyPapayat</a></strong> by FitnessFirst</h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="<?php echo base_url('Site'); ?>">Home</a></li>
-						<li><a href="<?php echo base_url('Site/about'); ?>">About us</a></li>
-						<li><a href="<?php echo base_url('Site/bmi_calculator'); ?>">BMI Calculator</a></li>
-						<li><a href="<?php echo base_url('Site/tips_and_suggestions'); ?>">Tips and Suggestions</a></li>
-						<li><a href="<?php echo base_url('Site/contact'); ?>">Contact us</a></li>
-
-					</ul>
-				</nav>
-			</header>
-
-		<!-- Banner -->
-			<section id="banner">
-				<h2>Calculator</h2>
-				<p>Description</p>
-			</section>
-
+		
+      <section id="one" class="wrapper style1">
+        <div class="container 75%">
+          <div class="row 200%">
+        		<h2>Imperial (US) Method</h2>
+        				<p><form type="post" action="<?php echo base_url();?>site/imperial_result">
+          					<label for="pounds">Weight in Pounds lbs</label>
+    			     		<input type="number" name="pounds" placeholder="Pounds/lbs"    step="any" > <br/><br/>
+          					<label for="inch">Height in Foot/Feet' Inches"</label>
+    						&nbsp<input type="number" name="foot"   placeholder="foot/feet/ft'" step="any" >
+          					&nbsp<input type="number" name="inch"   placeholder='Inch/Inches/"' step="any" >
+          				<br/><br/>
+    					<button class="btn btn-primary" type="submit" id="button">Calculate</button>
+    		</form></p>
+      		</div>
+      	</div>
+      </section>
 
       <section id="one" class="wrapper style1">
         <div class="container 75%">
           <div class="row 200%">
-        <h2><?php echo $title;?></h2>
-        <p><?php echo $tips;?></p>
+        <h2>Metric Method</h2>
+        <p><form type="post" action="<?php echo base_url();?>site/metric_result">
+          <label for="pounds">Weight in Kilograms Kg</label>
+    			<input type="number"  step="any"   name="kilogram" placeholder="Kg"> <br/><br/>
+            <label for="inch">Height in Meters/Meteres m" </label>
+    			<input type="number" step="any" name="meters" placeholder="m">
+          <br/><br/>
+    			<button type="submit" id="button">Calculate</button>
+    		</form></p>
       </div>
       </div>
       </section>
-
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">

@@ -21,7 +21,6 @@
 		<link type="text/css" rel="stylesheet"  href="<?php echo base_url();?>css/skel.css" />
 		<link type="text/css" rel="stylesheet"  href="<?php echo base_url();?>css/style.css" />
 		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/style-xlarge.css"/>
-		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/style-pinterest.css" rel="stylesheet">
 
 
@@ -34,8 +33,10 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="<?php echo base_url('Site'); ?>">Home</a></li>
-						<li><a href="<?php echo base_url('Site/about');?>">About Us</a></li>
-						<li><a href="<?php echo base_url('Site/contact');?>">Contact Us</a></li>
+						<li><a href="<?php echo base_url('Site/about'); ?>">About us</a></li>
+						<li><a href="<?php echo base_url('Site/bmi_calculator'); ?>">BMI Calculator</a></li>
+						<li><a href="<?php echo base_url('Site/tips_and_suggestions'); ?>">Tips and Suggestions</a></li>
+						<li><a href="<?php echo base_url('Site/contact'); ?>">Contact us</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -46,7 +47,7 @@
 			<div class="row">
     
 
-    
+    <h3>Tips &#38; Suggestions</h3>
     <section id="pinBoot">
     	<?php if(isset($content)){
               foreach($content as $cont): ?>

@@ -57,11 +57,9 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
 
-                    <li  class="active">
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i>Accounts </a>
+                   
+                    <li class="active">
+                        <a href="<?php echo base_url()."Admin/accounts_management"?>"><i class="fa fa-fw fa-desktop"></i> Accounts </a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> CMS <i class="fa fa-fw fa-caret-down"></i></a>
@@ -81,7 +79,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                        <a href=""><i class="fa fa-fw fa-bar-chart"></i> Reports</a>
                     </li>
 
                 </ul>

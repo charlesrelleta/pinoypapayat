@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <title>Pinoypapayat | Login</title>
     <link rel="stylesheet" href="<?php echo base_url();?>calm/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/font-awesome.min.css">
 </head>
-<<<<<<< HEAD
 
-  <body>
-=======
   <body>
 
 
   <div class="wrapper">
 	<div class="container">
 	<br><br><br>
-		<h1>Welcome Administrator</h1>
+		<h2 style="color: white;">Welcome Administrator</h2>
 
-  <?php echo validation_errors(); ?>
+  
+
+ 
+
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Error: </strong><?php echo validation_errors(); ?>
+</div>
 		<form method="post" action="<?php echo base_url()?>admin/login">
 
-<br><br><br>
 			<input type="text"     name="username" placeholder="Username">
 			<input type="password" name="password" placeholder="Password">
 			<button type="submit" id="button">Login</button>
@@ -44,7 +49,7 @@
 
         <script src="<?php echo base_url();?>calm/js/index.js"></script>
 
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 
   </body>

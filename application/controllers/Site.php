@@ -43,6 +43,12 @@ class Site extends CI_Controller {
 	{
 		$this->load->view('client/bmi_calculator');
 	}
+
+	public function tips_and_suggestions()
+	{
+		$this->load->view('client/dashboard_view');
+	}
+
   public function check_bmi($bmi_result){
 
     if($bmi_result < 18.5){

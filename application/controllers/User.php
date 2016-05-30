@@ -21,5 +21,6 @@ class User extends CI_Controller {
 		$this->load->view('user/profile_view');
 	}
 	
+	
 
 	}

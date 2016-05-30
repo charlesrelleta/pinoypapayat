@@ -66,12 +66,8 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i>Accounts </a>
+                    <li >
+                        <a href="<?php echo base_url()."Admin/accounts_management"?>"><i class="fa fa-fw fa-desktop"></i> Accounts </a>
                     </li>
                     <li class="active">
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> CMS <i class="fa fa-fw fa-caret-down"></i></a>
@@ -88,13 +84,12 @@
                             <li>
                                 <a href="<?php echo base_url()."Admin/cms_posts"?>">Posts</a>
                             </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>
+                            
 
                 </ul>
+                <li>
+                        <a href=""><i class="fa fa-fw fa-bar-chart"></i> Reports</a>
+                    </li>
             </div>
             <!-- /.navbar-collapse -->
         </nav>

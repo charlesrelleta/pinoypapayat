@@ -16,20 +16,22 @@
 		<script src="<?php echo base_url();?>js/skel-layers.min.js"></script>
 		<script src="<?php echo base_url();?>js/init.js"></script>
 
-			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/skel.css" />
 			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style.css" />
 			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style-xlarge.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/bootstrap.min.css" />
 
 	</head>
 	<body class="landing">
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<h1><strong><a href="index.html">PinoyPapayat</a></strong> by FitnessFirst</h1>
+				<h1><strong><a href="#">PinoyPapayat</a></strong> by FitnessFirst</h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="<?php echo base_url('Site'); ?>">Home</a></li>
 						<li><a href="<?php echo base_url('Site/about'); ?>">About us</a></li>
+						<li><a href="<?php echo base_url('Site/bmi_calculator'); ?>">BMI Calculator</a></li>
+						<li><a href="<?php echo base_url('Site/tips_and_suggestions'); ?>">Tips and Suggestions</a></li>
 						<li><a href="<?php echo base_url('Site/contact'); ?>">Contact us</a></li>
 					</ul>
 				</nav>
@@ -41,22 +43,29 @@
 				<p>Description</p>
 			</section>
 
-      <section id="one" class="wrapper style1">
+      
+<div class="container">
+<br><br>
+    <div class="panel panel-default">
+  		<div class="panel-body">
+    		<section id="one" class="wrapper style1">
         <div class="container 75%">
           <div class="row 200%">
-        <h2>Imperial (US) Method</h2>
-        <p><form type="post" action="<?php echo base_url();?>site/imperial_result">
-          <label for="pounds">Weight in Pounds lbs</label>
-    			     <input type="number" name="pounds" placeholder="Pounds/lbs"    step="any" > <br/><br/>
-          <label for="inch">Height in Foot/Feet' Inches"</label>
-    			&nbsp<input type="number" name="foot"   placeholder="foot/feet/ft'" step="any" >
-          &nbsp<input type="number" name="inch"   placeholder='Inch/Inches/"' step="any" >
-          <br/><br/>
-    			<button type="submit" id="button">Calculate</button>
+        		<h2>Imperial (US) Method</h2>
+        				<p><form type="post" action="<?php echo base_url();?>site/imperial_result">
+          					<label for="pounds">Weight in Pounds lbs</label>
+    			     		<input type="number" name="pounds" placeholder="Pounds/lbs"    step="any" > <br/><br/>
+          					<label for="inch">Height in Foot/Feet' Inches"</label>
+    						&nbsp<input type="number" name="foot"   placeholder="foot/feet/ft'" step="any" >
+          					&nbsp<input type="number" name="inch"   placeholder='Inch/Inches/"' step="any" >
+          				<br/><br/>
+    					<button class="btn btn-primary" type="submit" id="button">Calculate</button>
     		</form></p>
-      </div>
-      </div>
+      		</div>
+      	</div>
       </section>
+  		</div>
+	</div>
 
       <section id="one" class="wrapper style1">
         <div class="container 75%">
@@ -73,6 +82,7 @@
       </div>
       </div>
       </section>
+      </div>
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">

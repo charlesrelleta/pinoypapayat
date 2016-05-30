@@ -20,7 +20,7 @@ class Admin extends CI_Controller {
 				$this->form_validation->set_rules('password', 'Password', 'trim|xss_clean|required|callback_password_check');
 
 			if ($this->form_validation->run()){
-				$this->home();
+				$this->accounts_management();
 			}else{
 					$this->load->view('administrator/login_view');
 			}
@@ -43,10 +43,6 @@ class Admin extends CI_Controller {
     }
 	}
 
-	public function home()
-	{
-		$this->load->view('administrator/home_view');
-	}
 
 	public function accounts_management()
 		{
