@@ -166,11 +166,10 @@ redirect("Admin/cms_posts");
 	$this->cms_model->update_post($data,$id);
 	redirect("Admin/cms_posts");
 	}
-	function verify_registration()
-	  {
-			$this->form_validation->set_rules('username', 'Username', 'trim|required');
-			$this->form_validation->set_rules("password", "Password", 'trim|xss_clean|required|callback_check');
-			$this->form_validation->set_rules("confirmpassword", "Confirm Password", 'trim|xss_clean|required');
+	function verify_registration(){
+			$this->form_validation->set_rules('username', 'Username', 'min_length[6]|max_length[50]|trim|required');
+			$this->form_validation->set_rules("password", "Password", 'min_length[6]|max_length[50]|trim|xss_clean|required|matches[confirmpassword]');
+			$this->form_validation->set_rules("confirmpassword", "Confirm Password", 'min_length[6]|trim|xss_clean|required');
 			$this->form_validation->set_rules('firstname', 'First Name', 'required');
 			$this->form_validation->set_rules('middlename', 'Middle Name', 'required');
 			$this->form_validation->set_rules('lastname', 'Last Name', 'required');
@@ -180,41 +179,27 @@ redirect("Admin/cms_posts");
 			$this->form_validation->set_rules('email', 'Email', 'trim|xss_clean|required');
 			$this->form_validation->set_rules('profession', 'Profession', 'required');
 
-		if ($this->form_validation->run()){
-			$this->home();
-		}else{
-				$this->load->view('administrator/login_view');
-		}
-
-
-
-
-		}
-
-		public function check(){
-			$data = array(
-				'username' => $this->input->get('username'),
-				'password' => $this->input->get('password'),
-				'name_first' =>  $this->input->get('firstname'),
-				'name_middle' =>  $this->input->get('middlename'),
-				'name_last' =>  $this->input->get('lastname'),
-				'number_license' =>  $this->input->get('license'),
-				'gender' =>  $this->input->get('gender'),
-				'birthdate' =>  $this->input->get('birthdate'),
-				'email' =>  $this->input->get('email'),
-				'profession' =>  $this->input->get('profession'),
-			);
-			$result = $this->accounts_model->add_user($data);
-
-			if($result)
-			{
-					echo "true";
-					redirect("Admin/");
+			if($this->form_validation->run()){
+				$data = array(
+					'username' => $this->input->post('username'),
+					'password' => $this->input->post('password'),
+					'name_first' =>  $this->input->post('firstname'),
+					'name_middle' =>  $this->input->post('middlename'),
+					'name_last' =>  $this->input->post('lastname'),
+					'number_license' =>  $this->input->post('license'),
+					'gender' =>  $this->input->post('gender'),
+					'birthdate' =>  $this->input->post('birthdate'),
+					'email' =>  $this->input->post('email'),
+					'profession' =>  $this->input->post('profession'),
+				);
+						$result = $this->accounts_model->add_user($data);
+							if($result){
+								$this->load->view('administrator/login_view');
+							}else{
+								$this->load->view('client/registration_view');
+							}
+			}else{
+				$this->load->view('client/registration_view');
 			}
-			else
-			{
-					echo "false";
-			}
-
 		}
 	}

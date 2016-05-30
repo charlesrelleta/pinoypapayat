@@ -13,6 +13,7 @@
 	<br><br><br>
 		<h1>Welcome Administrator</h1>
 
+    <?php echo validation_errors(); ?>
 		<form class="form" method="POST" action="<?php echo base_url();?>admin/verify_registration">
       <br><br><br>
   			<input type="text"     placeholder="Username"         name="username"         >
@@ -30,7 +31,6 @@
         </select>
         <input type="date"  name="birthdate">
         <input type="email" name="email"        placeholder="Email">
-        <input type="email" name="confirmemail"  placeholder="Confirm Email">
         <input type="text"  name="profession"   placeholder="Profession">
       <button type="submit" id="button">Login</button>
 		</form>
