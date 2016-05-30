@@ -165,8 +165,10 @@ redirect("Admin/cms_posts");
 	redirect("Admin/cms_posts");
 	}
 
-	function verify_registration()
-	  {
+	function verify_registration(){
+			$this->form_validation->set_rules('username', 'Username', 'min_length[6]|max_length[50]|trim|required');
+			$this->form_validation->set_rules("password", "Password", 'min_length[6]|max_length[50]|trim|xss_clean|required|matches[confirmpassword]');
+			$this->form_validation->set_rules("confirmpassword", "Confirm Password", 'min_length[6]|trim|xss_clean|required');
 			$this->form_validation->set_rules('username', 'Username', 'trim|required');
 			$this->form_validation->set_rules("password", "Password", 'trim|xss_clean|required|callback_check');
 			$this->form_validation->set_rules("confirmpassword", "Confirm Password", 'trim|xss_clean|required');
@@ -184,12 +186,5 @@ redirect("Admin/cms_posts");
 		}else{
 				$this->load->view('administrator/login_view');
 		}
-
-
-
-
 		}
-
-		
-
 	}

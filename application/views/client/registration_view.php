@@ -13,11 +13,8 @@
 	<br><br><br>
 		<h1>Welcome Administrator</h1>
 
-<<<<<<< HEAD
-		<form class="form" action="<?php echo base_url();?>admin/verify_registration">
-=======
+    <?php echo validation_errors(); ?>
 		<form class="form" method="POST" action="<?php echo base_url();?>admin/verify_registration">
->>>>>>> a96575bc3bb3ea9038c8c0af86fe79555b6e10dc
       <br><br><br>
   			<input type="text"     placeholder="Username"         name="username"         >
   			<input type="password" placeholder="Password"         name="password"         >
@@ -34,7 +31,6 @@
         </select>
         <input type="date"  name="birthdate">
         <input type="email" name="email"        placeholder="Email">
-        <input type="email" name="confirmemail"  placeholder="Confirm Email">
         <input type="text"  name="profession"   placeholder="Profession">
       <button type="submit" id="button">Login</button>
 		</form>

@@ -30,8 +30,8 @@ class Accounts_model extends CI_Model {
     }
 
     function add_user($cont_data){
-      $this->db->insert('accounts', $cont_data);
-      return true;
+      	$query = $this->db->insert('accounts', $cont_data);
+        return ($this->db->affected_rows() != 1) ? false : true;
     }
 
     public function get_users() {
