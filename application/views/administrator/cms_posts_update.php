@@ -129,8 +129,8 @@
                                     <h2 align="center" class="glyphicon glyphicon-shopping-cart"> About page Content</h2></div>
                                       <div class="panel-body">
                                         <?php foreach($content as $cont): ?>
-                                          <form name="about" method="post" action="<?php echo base_url().'admin/update_contacts/' ?>" >
-
+                                          <form name="post" method="post" action="<?php echo base_url().'admin/update_post/' ?>" >
+                                                                <input type="text" name="id" hidden="hidden" value="<?php echo $cont->_id;?>" >
                                             <br/><h3 align="center" class="panel panel-success">TITLE</h3>
                                                                 <textarea name="title" rows="10" cols="80">
                                                                   <?php echo $cont->title;?>
@@ -139,33 +139,12 @@
                                                                 <textarea name="description" rows="10" cols="80">
                                                                   <?php echo $cont->description;?>
                                                                 </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">TELEPHONE TITLE</h3>
-                                                                <textarea name="tel_title"  rows="10" cols="80">
-                                                                  <?php echo $cont->tel_title;?>
+                                              <br/><h3 align="center" class="panel panel-success">CONTENT</h3>
+                                                                <textarea name="content" rows="10" cols="80">
+                                                                  <?php echo $cont->content;?>
                                                                 </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">TELEPHONE NUMBER</h3>
-                                                                <textarea name="telephone" rows="10" cols="80">
-                                                                  <?php echo $cont->telephone;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">CELLPHONE TITLE</h3>
-                                                                <textarea name="cel_title" rows="10" cols="80">
-                                                                  <?php echo $cont->cel_title;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">CELLPHONE NUMBER</h3>
-                                                                <textarea name="cellphone" rows="10" cols="80">
-                                                                  <?php echo $cont->cellphone;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">EMAIL TITLE</h3>
-                                                                <textarea name="email_title" rows="10" cols="80">
-                                                                  <?php echo $cont->email_title;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">EMAIL ADDRESS</h3>
-                                                                <textarea name="email"rows="10" cols="80">
-                                                                  <?php echo $cont->email;?>
-                                                                </textarea><br/>
-                                                           <div class="form-group"><button class="btn btn-danger" type="submit"> OK</button></div>
+                                                           <div class="form-group"><button class="btn btn-danger" type="submit"> UPDATE </button></div>
                                                             </form>
-
                                                                 <?php endforeach;?>
 
                                                         </div>

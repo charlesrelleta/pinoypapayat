@@ -65,10 +65,10 @@
                 <ul class="nav navbar-nav side-nav">
 
                     <li  class="active">
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Dashboard</a>
+                        <a href="<?php echo base_url();?>user/dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i>Accounts </a>
+                        <a href="<?php echo base_url();?>user/profile"><i class="fa fa-fw fa-user"></i> Profile </a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> CMS <i class="fa fa-fw fa-caret-down"></i></a>
@@ -103,17 +103,52 @@
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Tables
-                        </h1>
+                        <br><br><br>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-table"></i> Tables
+                                <i class="fa fa-table"></i> 
                             </li>
                         </ol>
+                    </div>
+
+                    
+                    <div class="panel panel-default">
+                    
+                        <div class="panel-body">
+                        <div class="col-lg-12">
+                        <input type="text" class="form-control" placeholder="Title">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Description">
+                        <br>
+                        <textarea placeholder="Post something..." class="form-control" rows="3"></textarea>
+                        <br>
+                        <input type="file">Upload Photo</input>
+                        <br><br>
+                        <button class="btn btn-primary">Post</button>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><center>Posts</center></div>
+                    <div class="panel-body">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <h3>Sample Post Title</h3>
+                                    <h6>Sample post Description</h6>
+                                    <center><img src="<?php echo base_url();?>images/pic01.jpg" alt="Una"></center><br>
+                                    <p>Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. 
+                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. 
+                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. 
+                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. 
+                                    Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. </p>
+                                </div>
+                            </div>
+                     </div>
+                    <div class="panel-footer"><center>- End -</center></div>        
                     </div>
                 </div>
                 <!-- /.row -->

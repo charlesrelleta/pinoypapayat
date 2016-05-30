@@ -100,88 +100,70 @@
         </nav>
 
         <div id="page-wrapper">
-
             <div class="container-fluid">
-
-                <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Tables
+                            <a class="btn btn-success pull-right" href="<?php echo base_url()."admin/goto_addPost/";?>" role="button">ADD POST</a>
                         </h1>
+
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                <i class="fa fa-dashboard"></i>  <a href="<?php base_url()."Admin"?>">CMS</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-table"></i> Tables
+                                <i class="fa fa-table"></i> Posts
+                            </li>  </li>
+                            <li class="pull-right">
+
                             </li>
                         </ol>
+
                     </div>
                 </div>
                 <!-- /.row -->
                 <div class="container"><div class="wrapper">
-                    <div id="about"  class="about">
+
                       <div class="row">
-                          <div class="text-center wowload " style=" padding-left: 10.0em; padding-right: 10.0em">
+                          <div class="text-center wowload " style="padding-right: 4.0em">
                               <div>
                                   <div class="panel-heading"><br>
-                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> About page Content</h2></div>
+                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> POST DETAILS</h2></div>
                                       <div class="panel-body">
-                                        <?php foreach($content as $cont): ?>
-                                          <form name="about" method="post" action="<?php echo base_url().'admin/update_contacts/' ?>" >
 
-                                            <br/><h3 align="center" class="panel panel-success">TITLE</h3>
-                                                                <textarea name="title" rows="10" cols="80">
-                                                                  <?php echo $cont->title;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">DESCRIPTION</h3>
-                                                                <textarea name="description" rows="10" cols="80">
-                                                                  <?php echo $cont->description;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">TELEPHONE TITLE</h3>
-                                                                <textarea name="tel_title"  rows="10" cols="80">
-                                                                  <?php echo $cont->tel_title;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">TELEPHONE NUMBER</h3>
-                                                                <textarea name="telephone" rows="10" cols="80">
-                                                                  <?php echo $cont->telephone;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">CELLPHONE TITLE</h3>
-                                                                <textarea name="cel_title" rows="10" cols="80">
-                                                                  <?php echo $cont->cel_title;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">CELLPHONE NUMBER</h3>
-                                                                <textarea name="cellphone" rows="10" cols="80">
-                                                                  <?php echo $cont->cellphone;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">EMAIL TITLE</h3>
-                                                                <textarea name="email_title" rows="10" cols="80">
-                                                                  <?php echo $cont->email_title;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">EMAIL ADDRESS</h3>
-                                                                <textarea name="email"rows="10" cols="80">
-                                                                  <?php echo $cont->email;?>
-                                                                </textarea><br/>
-                                                           <div class="form-group"><button class="btn btn-danger" type="submit"> OK</button></div>
-                                                            </form>
+                                          <table class="table table-condensed .table-responsive">
+                                            <tr>
+                                              <td>TITLE</td>
+                                              <td>DESCRIPTION</td>
+                                              <td>CONTENT</td>
+                                              <td>DATE POSTED</td>
+                                              <td>DATE UPDATED</td>
+                                              <td>ACTION</td>
+                                            </tr>
+                                            <?php
+                                            if($content!=false){
+                                               foreach($content as $cont): ?>
+                                              <tr>
+                                                <td><?php echo $cont->title; ?></td>
+                                                <td><?php echo $cont->description; ?></td>
+                                                <td><?php echo $cont->content; ?></td>
+                                                <td><?php echo $cont->date_posted; ?></td>
+                                                <td><?php echo $cont->date_updated; ?></td>
+                                                <td><a class="btn btn-warning" href="<?php echo base_url()."admin/goto_updatePost/".$cont->_id;?>" role="button">EDIT</a></td>
+                                              </tr>
+                                            <?php endforeach;}
+                                            else { ?>
+                                                <script> alert("No Records Yet!");</script>
+                                            <?php }?>
 
-                                                                <?php endforeach;?>
-
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- works -->
-
-
-                                </div>
-
+                                          </table>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
         </div>
         <!-- /#page-wrapper -->
 

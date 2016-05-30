@@ -20,6 +20,12 @@ class Cms_model extends CI_Model {
         return $r;
   }
 
+	public function get_posts(){
+	        $q = $this->db->get('cms_posts');
+	        $r = $q->result();
+	        return $r;
+	  }
+
 	public function get_home()
 	{
 		$q = $this->db->get('cms_home');
@@ -27,17 +33,19 @@ class Cms_model extends CI_Model {
 		return $r;
 	}
 
-  function get_by_id($id){
+  function post_get_by_id($id){
     $query = $this->db
     ->select("*")
-    ->from("content")
-    ->where("cont_id", $id)
+    ->from("cms_posts")
+    ->where("_id", $id)
     ->get();
     return $query->result();
 	//	$this->db->where('serial', $id);
 	//	return $this->db->get($this->products);
 	}
-
+  function add_post($cont_data){
+    $this->db->insert('cms_posts', $cont_data);
+  }
 	function update_about($cont_data){
     $this->db->where('_id', 1);
     $this->db->update('cms_about', $cont_data);
@@ -53,5 +61,9 @@ class Cms_model extends CI_Model {
       $this->db->update('cms_home', $cont_data);
   	}
 
+		function update_post($cont_data, $id){
+	    $this->db->where('_id', $id);
+	    $this->db->update('cms_posts', $cont_data);
+		}
 
 }

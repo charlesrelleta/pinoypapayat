@@ -3,28 +3,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function __construct(){
 					parent::__construct();
 	        $this->load->model("cms_model");
+	        $this->load->model("accounts_model");
 	}
 	public function index()
 	{
 		$this->load->view('administrator/login_view');
+	}
+
+	public function login(){
+
+
+			$username = $this->input->get('username');
+	    $password = $this->input->get('password');
+	    $result = $this->accounts_model->login($username, $password);
+	    if($result)
+	    {
+		      echo "TRUE";
+	    }
+	    else
+	    {
+
+	      echo "false";
+	    }
 	}
 
 	public function home()
@@ -32,7 +35,18 @@ class Admin extends CI_Controller {
 		$this->load->view('administrator/home_view');
 	}
 
+	public function accounts_management()
+		{
 
+			if ($query = $this->accounts_model->get_users()) {
+				$data['content'] = $query;
+				}
+			else {
+				$data['content'] = false;
+			}
+
+			$this->load->view('administrator/accounts_view',$data);
+		}
 	public function cms_home()
 	{
 		if ($query = $this->cms_model->get_home()) {
@@ -54,6 +68,51 @@ class Admin extends CI_Controller {
 		}
 		$this->load->view('administrator/cms_contacts_view',$data);
 	}
+	public function cms_posts()
+	{
+
+		if ($query = $this->cms_model->get_posts()) {
+			$data['content'] = $query;
+			}
+		else {
+			$data['content'] = false;
+		}
+
+		$this->load->view('administrator/cms_posts_view',$data);
+	}
+
+  public function goto_updatePost(){
+      $id = $this->uri->segment(3);
+			if ($query = $this->cms_model->post_get_by_id($id)) {
+				$data['content'] = $query;
+			}
+    	$this->load->view('administrator/cms_posts_update',$data);
+	}
+
+	public function goto_addPost(){
+			$this->load->view('administrator/cms_posts_add');
+	}
+
+	public function add_post(){
+		$data = array(
+		'title' => $this->input->post('title'),
+		'description' => $this->input->post('description'),
+		'content' =>  $this->input->post('content')
+	);
+	$this->cms_model->add_post($data);
+redirect("Admin/cms_posts");
+	}
+
+	public function update_about(){
+		$data = array(
+		'title' => $this->input->post('title'),
+		'description' => $this->input->post('description'),
+		'content' =>  $this->input->post('content')
+	);
+	$this->cms_model->update_about($data);
+	redirect("Admin/cms_about");
+	}
+
 
 	public function update_home(){
 		$data = array(
@@ -66,15 +125,6 @@ class Admin extends CI_Controller {
 	redirect("Admin/cms_home");
 	}
 
-	public function update_about(){
-		$data = array(
-		'title' => $this->input->post('title'),
-		'description' => $this->input->post('description'),
-		'content' =>  $this->input->post('content')
-	);
-	$this->cms_model->update_about($data);
-	redirect("Admin/cms_about");
-	}
 
 	public function update_contacts(){
 		$data = array(
@@ -91,5 +141,47 @@ class Admin extends CI_Controller {
 	redirect("Admin/cms_contacts");
 	}
 
+	public function update_post(){
 
-}
+		date_default_timezone_set("Asia/Hong_Kong");
+	  $date_info = date('Y-m-d H:i:s');
+		$data = array(
+		'title' => $this->input->post('title'),
+		'description' => $this->input->post('description'),
+		'content' =>  $this->input->post('content'),
+		'date_updated' => $date_info
+	);
+	$id = $this->input->post('id');
+	$this->cms_model->update_post($data,$id);
+	redirect("Admin/cms_posts");
+	}
+
+	function verify_registration()
+	  {
+			$data = array(
+			'username' => $this->input->get('username'),
+			'password' => $this->input->get('password'),
+			'name_first' =>  $this->input->get('firstname'),
+			'name_middle' =>  $this->input->get('middlename'),
+			'name_last' =>  $this->input->get('lastname'),
+			'number_license' =>  $this->input->get('license'),
+			'gender' =>  $this->input->get('gender'),
+			'birthdate' =>  $this->input->get('birthdate'),
+			'email' =>  $this->input->get('email'),
+			'profession' =>  $this->input->get('profession'),
+			);
+			$result = $this->accounts_model->add_user($data);
+
+			if($result)
+			{
+					echo "true";
+					redirect("Admin/");
+			}
+			else
+			{
+					echo "false";
+			}
+
+		}
+
+	}
