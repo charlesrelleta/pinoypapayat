@@ -9,7 +9,28 @@ class Accounts_model extends CI_Model {
         //$this->load->database();
     }
 
-    private $users = 'users';
+    function login($username, $password){
+      $this -> db -> select('*');
+  		$this->db->where("username",$username);
+                  $this->db->where("password",$password);
+                  $this->db->where("status",1);
+  		$query = $this -> db -> get("accounts");
+
+  		if($query -> num_rows() == 1)
+  		{
+  			return $query->result();
+  		}
+  		else
+  		{
+  			return false;
+  		}
+
+    }
+
+    function add_user($cont_data){
+      $this->db->insert('accounts', $cont_data);
+      return true;
+    }
 
     public function get_users() {
         $q = $this->db->get('accounts');

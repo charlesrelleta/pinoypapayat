@@ -22,7 +22,7 @@
     <link href="<?php echo base_url();?>sb/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
         <!-- Custom EDITOR -->
-    <script src="<?php echo base_url() ?>ckeditor/ckeditor.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,7 +71,7 @@
                         <a href="tables.html"><i class="fa fa-fw fa-table"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i>Something </a>
+                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i>Accounts </a>
                     </li>
                     <li class="active">
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> CMS <i class="fa fa-fw fa-caret-down"></i></a>
@@ -84,6 +84,9 @@
                             </li>
                             <li>
                                 <a href="<?php echo base_url()."Admin/cms_contacts"?>">Contacts Page</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url()."Admin/cms_posts"?>">Posts</a>
                             </li>
                         </ul>
                     </li>
@@ -128,31 +131,21 @@
                                         <?php foreach($content as $cont): ?>
                                           <form name="about" method="post" action="<?php echo base_url().'admin/update_home/' ?>" >
                                               <br/><h3 align="center" class="panel panel-success"> TITLE</h3>
-                                                                <textarea name="title" id="editor1" rows="10" cols="80">
+                                                                <textarea name="title" rows="10" cols="80">
                                                                   <?php echo $cont->title;?>
                                                                 </textarea><br/>
                                              <br/><h3 align="center" class="panel panel-success"> DESCRIPTION</h3>
-                                                                <textarea name="description" id="editor2" rows="10" cols="80">
+                                                                <textarea name="description" rows="10" cols="80">
                                                                   <?php echo $cont->description;?>
                                                                 </textarea><br/>
                                              <br/><h3 align="center" class="panel panel-success"> POST'S TITLE</h3>
-                                                                <textarea name="post_title" id="editor3" rows="10" cols="80">
+                                                                <textarea name="post_title" rows="10" cols="80">
                                                                   <?php echo $cont->post_title;?>
                                                                 </textarea><br/>
-                                             <br/><h3 align="center" class="panel panel-success"> POST'S CONTENT</h3>
-                                                                <textarea name="post_description" id="editor4" rows="10" cols="80">
-                                                                  <?php echo $cont->post_description;?>
-                                                                </textarea><br/>
-                                                           <div class="form-group"><button class="btn btn-danger" type="submit"> OK</button></div>
+                                                             <div class="form-group"><button class="btn btn-danger" type="submit"> OK</button></div>
                                                             </form>
 
                                                                 <?php endforeach;?>
-                                                                <script>
-                                                                    CKEDITOR.replace('editor1');
-                                                                        CKEDITOR.replace('editor2');
-                                                                            CKEDITOR.replace('editor3');
-                                                                                CKEDITOR.replace('editor4');
-                                                                </script>
                                                         </div>
                                                     </div>
 

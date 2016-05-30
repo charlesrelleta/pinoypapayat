@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +21,15 @@
     <!-- Custom Fonts -->
     <link href="<?php echo base_url();?>sb/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+        <!-- Custom EDITOR -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
@@ -57,13 +67,13 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
 
-                    <li  class="active">
+                    <li>
                         <a href="tables.html"><i class="fa fa-fw fa-table"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i>Accounts </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> CMS <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
@@ -110,8 +120,46 @@
                     </div>
                 </div>
                 <!-- /.row -->
+                <div class="container"><div class="wrapper">
+                    <div id="about"  class="about">
+                      <div class="row">
+                          <div class="text-center wowload " style=" padding-left: 10.0em; padding-right: 10.0em">
+                              <div>
+                                  <div class="panel-heading"><br>
+                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> About page Content</h2></div>
+                                      <div class="panel-body">
+                                        <?php foreach($content as $cont): ?>
+                                          <form name="post" method="post" action="<?php echo base_url().'admin/update_post/' ?>" >
+                                                                <input type="text" name="id" hidden="hidden" value="<?php echo $cont->_id;?>" >
+                                            <br/><h3 align="center" class="panel panel-success">TITLE</h3>
+                                                                <textarea name="title" rows="10" cols="80">
+                                                                  <?php echo $cont->title;?>
+                                                                </textarea><br/>
+                                            <br/><h3 align="center" class="panel panel-success">DESCRIPTION</h3>
+                                                                <textarea name="description" rows="10" cols="80">
+                                                                  <?php echo $cont->description;?>
+                                                                </textarea><br/>
+                                              <br/><h3 align="center" class="panel panel-success">CONTENT</h3>
+                                                                <textarea name="content" rows="10" cols="80">
+                                                                  <?php echo $cont->content;?>
+                                                                </textarea><br/>
+                                                           <div class="form-group"><button class="btn btn-danger" type="submit"> UPDATE </button></div>
+                                                            </form>
+                                                                <?php endforeach;?>
 
-                            <!-- /.container-fluid -->
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- works -->
+
+
+                                </div>
 
         </div>
         <!-- /#page-wrapper -->
