@@ -7,7 +7,6 @@ class Admin extends CI_Controller {
 					parent::__construct();
 	        $this->load->model("cms_model");
 	        $this->load->model("accounts_model");
-					$this->load->library('form_validation');
 	}
 	public function index()
 	{
@@ -15,31 +14,33 @@ class Admin extends CI_Controller {
 	}
 
 	public function login(){
+
 				$this->form_validation->set_rules('username', 'Username', 'required');
-				$this->form_validation->set_rules('password', 'Password', 'required|callback_password_check');
-		if ($this->form_validation->run() == FALSE)
-				{
-					$this->load->view('myform');
-				}
-				else
-				{
-					$this->load->view('formsuccess');
-				}
-			$username = $this->input->get('username');
-	    $password = $this->input->get('password');
-	    $result = $this->accounts_model->login($username, $password);
-	    if($result)
-	    {
-		      $this->home();
-	    }
-	    else
-	    {
-	      	echo "false";
-	    }
+				$this->form_validation->set_rules('password', 'Password', 'trim|xss_clean|required|callback_password_check');
+
+			if ($this->form_validation->run()){
+				$this->home();
+			}else{
+					$this->load->view('administrator/login_view');
+			}
 	}
 
-	public function
-
+	public function password_check()
+	{
+		$user = $this->input->post('username');
+    $pass=  $this->input->post('password');
+    //query the database
+    $result = $this->accounts_model->login($user, $pass);
+    if($result)
+    {
+      return TRUE;
+    }
+    else
+    {
+      $this->form_validation->set_message('password_check', 'Invalid email or password');
+      return FALSE;
+    }
+	}
 	public function home()
 	{
 		$this->load->view('administrator/home_view');
@@ -165,20 +166,43 @@ redirect("Admin/cms_posts");
 	$this->cms_model->update_post($data,$id);
 	redirect("Admin/cms_posts");
 	}
-
 	function verify_registration()
 	  {
+			$this->form_validation->set_rules('username', 'Username', 'trim|required');
+			$this->form_validation->set_rules("password", "Password", 'trim|xss_clean|required|callback_check');
+			$this->form_validation->set_rules("confirmpassword", "Confirm Password", 'trim|xss_clean|required');
+			$this->form_validation->set_rules('firstname', 'First Name', 'required');
+			$this->form_validation->set_rules('middlename', 'Middle Name', 'required');
+			$this->form_validation->set_rules('lastname', 'Last Name', 'required');
+			$this->form_validation->set_rules('license', 'License Number', 'required');
+			$this->form_validation->set_rules('gender', 'Gender', 'required');
+			$this->form_validation->set_rules('birthdate', 'Birth Date', 'required');
+			$this->form_validation->set_rules('email', 'Email', 'trim|xss_clean|required');
+			$this->form_validation->set_rules('profession', 'Profession', 'required');
+
+		if ($this->form_validation->run()){
+			$this->home();
+		}else{
+				$this->load->view('administrator/login_view');
+		}
+
+
+
+
+		}
+
+		public function check(){
 			$data = array(
-			'username' => $this->input->get('username'),
-			'password' => $this->input->get('password'),
-			'name_first' =>  $this->input->get('firstname'),
-			'name_middle' =>  $this->input->get('middlename'),
-			'name_last' =>  $this->input->get('lastname'),
-			'number_license' =>  $this->input->get('license'),
-			'gender' =>  $this->input->get('gender'),
-			'birthdate' =>  $this->input->get('birthdate'),
-			'email' =>  $this->input->get('email'),
-			'profession' =>  $this->input->get('profession'),
+				'username' => $this->input->get('username'),
+				'password' => $this->input->get('password'),
+				'name_first' =>  $this->input->get('firstname'),
+				'name_middle' =>  $this->input->get('middlename'),
+				'name_last' =>  $this->input->get('lastname'),
+				'number_license' =>  $this->input->get('license'),
+				'gender' =>  $this->input->get('gender'),
+				'birthdate' =>  $this->input->get('birthdate'),
+				'email' =>  $this->input->get('email'),
+				'profession' =>  $this->input->get('profession'),
 			);
 			$result = $this->accounts_model->add_user($data);
 
@@ -193,5 +217,4 @@ redirect("Admin/cms_posts");
 			}
 
 		}
-
 	}
