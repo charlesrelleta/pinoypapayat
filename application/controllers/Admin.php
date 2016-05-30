@@ -16,18 +16,31 @@ class Admin extends CI_Controller {
 	public function login(){
 
 
-			$username = $this->input->get('username');
-	    $password = $this->input->get('password');
-	    $result = $this->accounts_model->login($username, $password);
-	    if($result)
-	    {
-		      echo "TRUE";
-	    }
-	    else
-	    {
+				$this->form_validation->set_rules('username', 'Username', 'required');
+				$this->form_validation->set_rules('password', 'Password', 'trim|xss_clean|required|callback_password_check');
 
-	      echo "false";
-	    }
+			if ($this->form_validation->run()){
+				$this->home();
+			}else{
+					$this->load->view('administrator/login_view');
+			}
+	}
+
+	public function password_check()
+	{
+		$user = $this->input->post('username');
+    $pass=  $this->input->post('password');
+    //query the database
+    $result = $this->accounts_model->login($user, $pass);
+    if($result)
+    {
+      return TRUE;
+    }
+    else
+    {
+      $this->form_validation->set_message('password_check', 'Invalid email or password');
+      return FALSE;
+    }
 	}
 
 	public function home()
@@ -158,30 +171,29 @@ redirect("Admin/cms_posts");
 
 	function verify_registration()
 	  {
-			$data = array(
-			'username' => $this->input->get('username'),
-			'password' => $this->input->get('password'),
-			'name_first' =>  $this->input->get('firstname'),
-			'name_middle' =>  $this->input->get('middlename'),
-			'name_last' =>  $this->input->get('lastname'),
-			'number_license' =>  $this->input->get('license'),
-			'gender' =>  $this->input->get('gender'),
-			'birthdate' =>  $this->input->get('birthdate'),
-			'email' =>  $this->input->get('email'),
-			'profession' =>  $this->input->get('profession'),
-			);
-			$result = $this->accounts_model->add_user($data);
+			$this->form_validation->set_rules('username', 'Username', 'trim|required');
+			$this->form_validation->set_rules("password", "Password", 'trim|xss_clean|required|callback_check');
+			$this->form_validation->set_rules("confirmpassword", "Confirm Password", 'trim|xss_clean|required');
+			$this->form_validation->set_rules('firstname', 'First Name', 'required');
+			$this->form_validation->set_rules('middlename', 'Middle Name', 'required');
+			$this->form_validation->set_rules('lastname', 'Last Name', 'required');
+			$this->form_validation->set_rules('license', 'License Number', 'required');
+			$this->form_validation->set_rules('gender', 'Gender', 'required');
+			$this->form_validation->set_rules('birthdate', 'Birth Date', 'required');
+			$this->form_validation->set_rules('email', 'Email', 'trim|xss_clean|required');
+			$this->form_validation->set_rules('profession', 'Profession', 'required');
 
-			if($result)
-			{
-					echo "true";
-					redirect("Admin/");
-			}
-			else
-			{
-					echo "false";
-			}
+		if ($this->form_validation->run()){
+			$this->home();
+		}else{
+				$this->load->view('administrator/login_view');
+		}
+
+
+
 
 		}
+
+		
 
 	}

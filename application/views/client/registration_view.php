@@ -13,7 +13,11 @@
 	<br><br><br>
 		<h1>Welcome Administrator</h1>
 
+<<<<<<< HEAD
 		<form class="form" action="<?php echo base_url();?>admin/verify_registration">
+=======
+		<form class="form" method="POST" action="<?php echo base_url();?>admin/verify_registration">
+>>>>>>> a96575bc3bb3ea9038c8c0af86fe79555b6e10dc
       <br><br><br>
   			<input type="text"     placeholder="Username"         name="username"         >
   			<input type="password" placeholder="Password"         name="password"         >

@@ -5,14 +5,21 @@
     <title>Pinoypapayat | Login</title>
     <link rel="stylesheet" href="<?php echo base_url();?>calm/css/style.css">
 </head>
+<<<<<<< HEAD
 
   <body>
+=======
+  <body>
+
+
   <div class="wrapper">
 	<div class="container">
 	<br><br><br>
 		<h1>Welcome Administrator</h1>
 
-		<form type="post" action="<?php echo base_url();?>admin/login">
+  <?php echo validation_errors(); ?>
+		<form method="post" action="<?php echo base_url()?>admin/login">
+
 <br><br><br>
 			<input type="text"     name="username" placeholder="Username">
 			<input type="password" name="password" placeholder="Password">
