@@ -46,42 +46,88 @@
       
 <div class="container">
 <br><br>
+	<div class="">
+
     <div class="panel panel-default">
   		<div class="panel-body">
-    		<section id="one" class="wrapper style1">
-        <div class="container 75%">
-          <div class="row 200%">
-        		<h2>Imperial (US) Method</h2>
-        				<p><form type="post" action="<?php echo base_url();?>site/imperial_result">
-          					<label for="pounds">Weight in Pounds lbs</label>
-    			     		<input type="number" name="pounds" placeholder="Pounds/lbs"    step="any" > <br/><br/>
-          					<label for="inch">Height in Foot/Feet' Inches"</label>
-    						&nbsp<input type="number" name="foot"   placeholder="foot/feet/ft'" step="any" >
-          					&nbsp<input type="number" name="inch"   placeholder='Inch/Inches/"' step="any" >
-          				<br/><br/>
-    					<button class="btn btn-primary" type="submit" id="button">Calculate</button>
-    		</form></p>
-      		</div>
-      	</div>
-      </section>
+    		<br/><br/>
+    	
+     	<div class="col-sm-6 ">
+      	<div class="panel panel-default">
+  			<div class="panel-body">
+  				<section id="one" class="wrapper style2">
+        		
+        		<h2 style="padding-left: 20px;" >Imperial (US) Method</h2>
+        		<br/><br>
+
+        				<form style="padding-left: 20px;" type="post" action="<?php echo base_url();?>site/imperial_result">
+          					<div class="row">
+          					<div class="col-xs-2">
+    							<label for="pounds">Weight:</label>
+  							</div>
+          					
+          					<div class="col-xs-4">
+    							<input type="number" name="pounds"  class="form-control" placeholder="Pounds/lbs'" step="any">
+  							</div><br><br><br>
+          					<div class="col-xs-2">
+    							<label for="inch">Height:</label>
+  							</div>
+    						
+          					<div class="col-xs-4">
+    							<input type="number" name="foot"  class="form-control" placeholder="foot/feet/ft'" step="any">
+  							</div>
+          					<div class="col-xs-4">
+    							<input type="number" name="inch"  class="form-control" placeholder="Inch/Inches/" step="any">
+  							</div>
+  							</div>
+          				<br>
+    					<center><button class="btn btn-primary" type="submit" id="button">Calculate</button></center>
+    					</form>
+      		
+     		</section>
+			</div>
   		</div>
+  		</div>
+
+  		<div class="col-sm-6 ">
+      	<div class="panel panel-default">
+  			<div class="panel-body">
+  				<section id="one" class="wrapper style2">
+        
+        <h2 style="padding-left: 20px";>Metric Method</h2>
+        <br/><br>
+        <form style="padding-left: 20px;" type="post" action="<?php echo base_url();?>site/metric_result">
+          
+          	<div class="col-xs-4">
+    			<label for="pounds">Weight in Kg:</label>
+  			</div>
+  			<div class="col-xs-4">
+    			<input type="number" name="kilogram"  class="form-control" placeholder="Kg" step="any">
+  			</div><br><br><br>
+  			<div class="col-xs-4">
+    			<label for="inch">Height in Meters:  </label>
+  			</div>
+            <div class="col-xs-4">
+    			<input type="number" name="meters"  class="form-control" placeholder="m" step="any">
+  			</div>
+          <br/><br/>
+          <br>
+    					<center><button class="btn btn-primary" type="submit" id="button">Calculate</button></center>
+    		</form>
+      
+      </section>
+			</div>
+  		</div>
+  		</div>
+
+
+  		</div>
+  		<br/><br/>
+	</div>
 	</div>
 
-      <section id="one" class="wrapper style1">
-        <div class="container 75%">
-          <div class="row 200%">
-        <h2>Metric Method</h2>
-        <p><form type="post" action="<?php echo base_url();?>site/metric_result">
-          <label for="pounds">Weight in Kilograms Kg</label>
-    			<input type="number"  step="any"   name="kilogram" placeholder="Kg"> <br/><br/>
-            <label for="inch">Height in Meters/Meteres m" </label>
-    			<input type="number" step="any" name="meters" placeholder="m">
-          <br/><br/>
-    			<button type="submit" id="button">Calculate</button>
-    		</form></p>
-      </div>
-      </div>
-      </section>
+
+      
       </div>
 		<!-- Footer -->
 			<footer id="footer">
@@ -92,9 +138,7 @@
 						<li><a href="#" class="icon fa-instagram"></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled</li>
-						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+						<li>&copy; Pinoypapayat</li>
 					</ul>
 				</div>
 			</footer>

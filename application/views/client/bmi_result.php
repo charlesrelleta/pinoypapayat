@@ -20,6 +20,7 @@
 			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style.css" />
 			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style-xlarge.css" />
 
+
 	</head>
 	<body class="landing">
 
@@ -41,11 +42,11 @@
 		<!-- Banner -->
 			<section id="banner">
 				<h2>RESULTS</h2>
-				<p>Description</p>
+				<p>Scroll Down for more Infos</p>
 			</section>
 
 
-      <section id="one" class="wrapper style1">
+      <section id="one" class="wrapper style2">
         <div class="container 75%">
           <div class="row 200%">
 						<?php foreach ($content as $cont): ?>
@@ -54,9 +55,25 @@
 			        <?php echo "<h4>".$cont->tips."</h4><br/>";?>
 						<?php endforeach; ?>
 
-      </div>
-      </div>
+      		</div>
+	      </div>
       </section>
+
+      <section id="one" class="wrapper style1">
+        <div class="container 75%">
+          <div class="">
+						<center>
+    			<h3>BMI Chart</h3>
+    		<img src="<?php echo base_url();?>images/bmi_chart.png">
+    		</center>
+
+      		</div>
+	      </div>
+      </section>
+
+      
+
+
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -67,9 +84,7 @@
 						<li><a href="#" class="icon fa-instagram"></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled</li>
-						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+						<li>&copy; Pinoypapayat</li>
 					</ul>
 				</div>
 			</footer>

@@ -36,6 +36,14 @@ class Admin extends CI_Controller {
     }
 	}
 
+	public function profile(){
+		$this->load->view('administrator/profile');
+	}
+
+	public function dashboard(){
+		$this->load->view('administrator/dashboard_view');
+	}
+
 	public function accounts_management()
 		{
 			if ($query = $this->accounts_model->get_users()) {
