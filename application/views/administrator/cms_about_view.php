@@ -58,7 +58,7 @@
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="<?php echo base_url()."admin/logout"?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -129,6 +129,7 @@
                                   <div class="panel-heading"><br>
                                     <h2 align="center" class="glyphicon glyphicon-shopping-cart"> About page Content</h2></div>
                                       <div class="panel-body">
+                                        <?php echo validation_errors(); ?>
                                         <?php foreach($content as $cont): ?>
                                           <form name="about" method="post" action="<?php echo base_url().'admin/update_about/' ?>" >
                                             <br/><h3 align="center" class="panel panel-success">TITLE</h3>

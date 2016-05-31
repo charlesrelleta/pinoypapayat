@@ -20,7 +20,7 @@
 		<link type="text/css" rel="stylesheet"  href="<?php echo base_url();?>css/skel.css" />
 		<link type="text/css" rel="stylesheet"  href="<?php echo base_url();?>css/style.css" />
 		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/style-xlarge.css"/>
-		
+
 			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/bootstrap.min.css" />
 
 	</head>
@@ -58,14 +58,13 @@
                             <div class="spacer">
                                 <div >
                                     <br><br>
-                                    <p><h5>	<?php echo $cont->tel_title;?></h5><?php echo $cont->telephone;?><br>
-                                        <h5><br><?php echo $cont->cel_title;?></h5> <?php echo $cont->cellphone;?><br>
-                                        <h5><br><?php echo $cont->email_title;?></h5><?php echo $cont->email;?><br>
-                                        <h5><br></h5>
+                                    <p><h5><br/>TELEPHONE:</h5><?php echo $cont->telephone;?><br/>
+                                        <h5><br/>CELLPHONE:</h5> <?php echo $cont->cellphone;?><br/>
+                                        <h5><br/>EMAIL:</h5><?php echo $cont->email;?><br/>
+                                        <h5><br/></h5>
                                     </p>
                                 </div>
                             </div>
-
 																	<?php endforeach;?>
                         </div>
                         <div class="col-sm-5">

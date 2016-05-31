@@ -58,7 +58,7 @@
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="<?php echo base_url()."admin/logout"?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -125,19 +125,18 @@
                           <div class="text-center wowload " style=" padding-left: 10.0em; padding-right: 10.0em">
                               <div>
                                   <div class="panel-heading"><br>
-                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> ADD BMI RESULT DESCRIPTION AND TIPS </h2></div>
+                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> ADD BMI RESULT DESCRIPTION AND TIPS </h2>
+                                    <?php echo validation_errors(); ?></div>
                                       <div class="panel-body">
+
 
                                           <form name="post" method="post" action="<?php echo base_url().'admin/add_bmiResult/' ;?>" >
                                             <br/><h3 align="center" class="panel panel-success">RESULT TITLE</h3>
-                                                                <textarea name="title" rows="10" cols="80">
-                                                                </textarea><br/>
+                                                                <textarea name="title" rows="10" cols="80"></textarea><br/>
                                             <br/><h3 align="center" class="panel panel-success">DESCRIPTION</h3>
-                                                                <textarea name="description" rows="10" cols="80">
-                                                                </textarea><br/>
+                                                                <textarea name="description" rows="10" cols="80"></textarea><br/>
                                               <br/><h3 align="center" class="panel panel-success">TIPS</h3>
-                                                                <textarea name="tips" rows="10" cols="80">
-                                                                </textarea><br/>
+                                                                <textarea name="tips" rows="10" cols="80"></textarea><br/>
                                               <br/><h3 align="center" class="panel panel-success">INDICATOR</h3>
                                                                 <textarea name="indicator" rows="10" cols="80">
                                                                 </textarea><br/>

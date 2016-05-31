@@ -58,7 +58,7 @@
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="<?php echo base_url()."admin/logout"?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -150,6 +150,8 @@
                                                 <td><?php echo $cont->date_posted; ?></td>
                                                 <td><?php echo $cont->date_updated; ?></td>
                                                 <td><a class="btn btn-warning" href="<?php echo base_url()."admin/goto_updatePost/".$cont->_id;?>" role="button">EDIT</a></td>
+                                                <td><a class="btn btn-danger" href="<?php echo base_url()."admin/goto_deletePost/".$cont->_id;?>" role="button">DELETE</a></td>
+
                                               </tr>
                                             <?php endforeach;}
                                             else { ?>

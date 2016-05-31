@@ -91,4 +91,10 @@ class Cms_model extends CI_Model {
       return $query->result();
     }
 
+		function deletepost($id){
+
+		$this->db->where('_id', $id);
+		$this->db->delete('cms_posts');
+		}
+
 }
