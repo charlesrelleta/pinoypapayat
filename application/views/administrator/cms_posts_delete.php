@@ -66,7 +66,8 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li >
+
+                   <li >
                         <a href="<?php echo base_url()."Admin/accounts_management"?>"><i class="fa fa-fw fa-desktop"></i> Accounts </a>
                     </li>
                     <li class="active">
@@ -86,12 +87,13 @@
 </li><li>
     <a href="<?php echo base_url()."Admin/bmi_results"?>">BMI Results</a>
                             </li>
-
-
-                </ul>
-                <li>
+                        </ul>
+                    </li>
+                   <li>
                         <a href=""><i class="fa fa-fw fa-bar-chart"></i> Reports</a>
                     </li>
+
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
@@ -119,40 +121,33 @@
                 <!-- /.row -->
                 <div class="container"><div class="wrapper">
                     <div id="about"  class="about">
+
                       <div class="row">
                           <div class="text-center wowload " style=" padding-left: 10.0em; padding-right: 10.0em">
                               <div>
                                   <div class="panel-heading"><br>
-                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> About page Content</h2></div>
+                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> ARE YOU SURE YOU WANT TO DELETE THIS POST?</h2></div>
                                       <div class="panel-body">
                                         <?php echo validation_errors(); ?>
                                         <?php foreach($content as $cont): ?>
-                                          <form name="about" method="post" action="<?php echo base_url().'admin/update_contacts/' ?>" >
-
+                                          <form name="post" method="post" action="<?php echo base_url().'admin/deletepost/' ?>" >
+                                                                <input type="text" name="id" hidden="hidden" value="<?php echo $cont->_id;?>" >
                                             <br/><h3 align="center" class="panel panel-success">TITLE</h3>
-                                                                <textarea name="title" rows="10" cols="80">
+                                                                <textarea name="title" rows="10" cols="80" disabled>
                                                                   <?php echo $cont->title;?>
                                                                 </textarea><br/>
                                             <br/><h3 align="center" class="panel panel-success">DESCRIPTION</h3>
-                                                                <textarea name="description" rows="10" cols="80">
+                                                                <textarea name="description" rows="10" cols="80" disabled>
                                                                   <?php echo $cont->description;?>
                                                                 </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">TELEPHONE NUMBER</h3>
-                                                                <textarea name="telephone" rows="10" cols="80">
-                                                                  <?php echo $cont->telephone;?>
+                                              <br/><h3 align="center" class="panel panel-success">CONTENT</h3>
+                                                                <textarea name="content" rows="10" cols="80" disabled>
+                                                                  <?php echo $cont->content;?>
                                                                 </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">CELLPHONE NUMBER</h3>
-                                                                <textarea name="cellphone" rows="10" cols="80">
-                                                                  <?php echo $cont->cellphone;?>
-                                                                </textarea><br/>
-                                            <br/><h3 align="center" class="panel panel-success">EMAIL ADDRESS</h3>
-                                                                <textarea name="email"rows="10" cols="80">
-                                                                  <?php echo $cont->email;?>
-                                                                </textarea><br/>
-                                                           <div class="form-group"><button class="btn btn-danger" type="submit"> OK</button></div>
+                                                           <div class="form-group"><button class="btn btn-danger" type="submit"> DELETE </button></div>
                                                             </form>
-
                                                                 <?php endforeach;?>
+                                                                <td><a class="btn btn-danger" href="<?php echo base_url()."admin/cms_posts";?>" role="button">CANCEL</a></td>
 
                                                         </div>
                                                     </div>

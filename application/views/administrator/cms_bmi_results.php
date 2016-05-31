@@ -58,7 +58,7 @@
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="<?php echo base_url()."admin/logout"?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -112,7 +112,7 @@
                                 <i class="fa fa-dashboard"></i>  <a href="<?php base_url()."Admin"?>">CMS</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-table"></i> Posts
+                                <i class="fa fa-table"></i> BMI RESULT DESCRIPTION AND TIPS
                             </li>  </li>
                             <li class="pull-right">
 
@@ -129,7 +129,7 @@
                           <div class="text-center wowload " style="padding-right: 4.0em">
                               <div>
                                   <div class="panel-heading"><br>
-                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> POST DETAILS</h2></div>
+                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> BMI RESULT DESCRIPTION AND TIPS</h2></div>
                                       <div class="panel-body">
 
                                           <table class="table table-condensed .table-responsive">

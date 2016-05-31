@@ -58,7 +58,7 @@
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="<?php echo base_url()."admin/logout"?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -121,12 +121,14 @@
                 <!-- /.row -->
                 <div class="container"><div class="wrapper">
                     <div id="about"  class="about">
+
                       <div class="row">
                           <div class="text-center wowload " style=" padding-left: 10.0em; padding-right: 10.0em">
                               <div>
                                   <div class="panel-heading"><br>
                                     <h2 align="center" class="glyphicon glyphicon-shopping-cart"> About page Content</h2></div>
                                       <div class="panel-body">
+                                        <?php echo validation_errors(); ?>
                                         <?php foreach($content as $cont): ?>
                                           <form name="post" method="post" action="<?php echo base_url().'admin/update_post/' ?>" >
                                                                 <input type="text" name="id" hidden="hidden" value="<?php echo $cont->_id;?>" >
