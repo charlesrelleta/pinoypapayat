@@ -67,11 +67,11 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
 
-                    <li class="active">
+                   <li >
                         <a href="<?php echo base_url()."Admin/accounts_management"?>"><i class="fa fa-fw fa-desktop"></i> Accounts </a>
                     </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-pencil-square"></i> CMS <i class="fa fa-fw fa-caret-down"></i></a>
+                    <li class="active">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> CMS <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
                                 <a href="<?php echo base_url()."Admin/cms_home"?>">Home Page</a>
@@ -89,7 +89,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                   <li>
                         <a href=""><i class="fa fa-fw fa-bar-chart"></i> Reports</a>
                     </li>
 
@@ -98,84 +98,75 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <
-        <!-- /#page-wrapper -->
+        <div id="page-wrapper">
 
-
-
-    <div id="page-wrapper">
-
-            <div class="container">
+            <div class="container-fluid">
 
                 <!-- Page Heading -->
                 <div class="row">
-                  <div class="col-lg-12">
-                    <h1 class="page-header"> User Accounts </h1>
-                      <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Panel heading</div>
-                          <div class="panel-body">
-                            <p>...</p>
-                          </div>
-                            <!-- Table -->
-                          <table class="table table-bordered table-hover">
-                          <tr>
-                                <th>USERNAME</th>
-                                <th>FIRST NAME</th>
-                                <th>LAST NAME</th>
-                                <th>LICENSE NUMBER</th>
-                                <th>GENDER</th>
-                                <th>EMAIL</th>
-                                <th>PROFESSION</th>
-                                <th>ACTION</th>
-                                <th>ACTION</th>
-                          </tr>
-                          <?php
-                                            if($content!=false){
-                                               foreach($content as $cont): ?>
-                                              <tr>
-                                                <td><?php echo $cont->username; ?></td>
-                                                <td><?php echo $cont->name_first; ?></td>
-                                                <td><?php echo $cont->name_last; ?></td>
-                                                <td><?php echo $cont->number_license; ?></td>
-                                                <td><?php echo $cont->gender; ?></td>
-                                                <td><?php echo $cont->email; ?></td>
-                                                <td><?php echo $cont->profession; ?></td>
-                                                <td><?php $stats =$cont->status;
-                                                 if ( $stats == 1) {
-                                                echo "ACTIVATED";
-                                              }else if($stats == 2) {
-                                                echo "DEACTIVATED";
-                                              }else {
-                                                echo "PENDING";
-                                              }?></td>
-                                                <td>
-                                                  <?php if($stats == 1){?>
-                                                    <a class="btn btn-warning" href="<?php echo base_url()."admin/account_deactivation/".$cont->_id?>" role="button">DEACTIVATE</a>
-                                                  <?php } else{?>
-                                                    <a class="btn btn-success" href="<?php echo base_url()."admin/account_activation/".$cont->_id?>" role="button">ACTIVATE</a>
-                                                    <?php }?>
-                                                    </td>
-                                              </tr>
-
-                                            <?php endforeach;}
-                                            else { ?>
-                                                <script> alert("No Records Yet!");</script>
-                                            <?php }?>
-                          </table>
-                      </div>
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Tables
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-table"></i> Tables
+                            </li>
+                        </ol>
                     </div>
                 </div>
                 <!-- /.row -->
+                <div class="container"><div class="wrapper">
+                    <div id="about"  class="about">
+                      <div class="row">
+                          <div class="text-center wowload " style=" padding-left: 10.0em; padding-right: 10.0em">
+                              <div>
+                                  <div class="panel-heading"><br>
+                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> About page Content</h2></div>
+                                      <div class="panel-body">
+                                        <?php echo validation_errors(); ?>
+                                        <?php foreach($content as $cont): ?>
+                                          <form name="post" method="post" action="<?php echo base_url().'admin/update_bmiResult/' ?>" >
+                                                                <input type="text" name="id" hidden="hidden" value="<?php echo $cont->_id;?>" >
+                                            <br/><h3 align="center" class="panel panel-success">TITLE</h3>
+                                                                <textarea name="title" rows="10" cols="80">
+                                                                  <?php echo $cont->title;?>
+                                                                </textarea><br/>
+                                            <br/><h3 align="center" class="panel panel-success">DESCRIPTION</h3>
+                                                                <textarea name="description" rows="10" cols="80">
+                                                                  <?php echo $cont->description;?>
+                                                                </textarea><br/>
+                                              <br/><h3 align="center" class="panel panel-success">CONTENT</h3>
+                                                                <textarea name="tips" rows="10" cols="80">
+                                                                  <?php echo $cont->tips;?>
+                                                                </textarea><br/>
+                                                           <div class="form-group"><button class="btn btn-danger" type="submit"> UPDATE </button></div>
+                                                            </form>
+                                                                <?php endforeach;?>
 
-                            <!-- /.container-fluid -->
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- works -->
+
+
+                                </div>
 
         </div>
         <!-- /#page-wrapper -->
-        </div>
+
     </div>
     <!-- /#wrapper -->
-</div>s
+
     <!-- jQuery -->
     <script src="<?php echo base_url();?>sb/js/jquery.js"></script>
 

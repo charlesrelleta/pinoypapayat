@@ -82,7 +82,9 @@
                                 <a href="<?php echo base_url()."Admin/cms_contacts"?>">Contacts Page</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url()."Admin/cms_posts"?>">Posts</a>
+                                    <a href="<?php echo base_url()."Admin/cms_posts"?>">Posts</a>
+</li><li>
+    <a href="<?php echo base_url()."Admin/bmi_results"?>">BMI Results</a>
                             </li>
                             
 

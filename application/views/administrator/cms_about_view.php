@@ -67,7 +67,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
 
-                    
+
                     <li >
                         <a href="<?php echo base_url()."Admin/accounts_management"?>"><i class="fa fa-fw fa-desktop"></i> Accounts </a>
                     </li>
@@ -84,9 +84,11 @@
                                 <a href="<?php echo base_url()."Admin/cms_contacts"?>">Contacts Page</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url()."Admin/cms_posts"?>">Posts</a>
+                                    <a href="<?php echo base_url()."Admin/cms_posts"?>">Posts</a>
+</li><li>
+    <a href="<?php echo base_url()."Admin/bmi_results"?>">BMI Results</a>
                             </li>
-                            
+
                         </ul>
                     </li>
                     <li>

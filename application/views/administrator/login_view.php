@@ -15,11 +15,6 @@
 	<div class="container">
 	<br><br><br>
 		<h2 style="color: white;">Welcome Administrator</h2>
-
-  
-
- 
-
 <div class="alert alert-danger alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>Error: </strong><?php echo validation_errors(); ?>

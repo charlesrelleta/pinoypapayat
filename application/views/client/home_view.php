@@ -42,9 +42,7 @@
 			<section id="banner">
 				<h2><?php echo $cont->title;?></h2>
 				<p><?php echo $cont->description;?></p>
-				<ul class="actions">
-					<li><a onclick="myFunction()" class="button special big">Know your BMI</a></li>
-				</ul>
+
 			</section>
 
 			<!-- One -->
@@ -57,9 +55,7 @@
 								</p>
 
 								<?php echo $cont->post_description;?>
-								<script type="text/javascript" id="WolframAlphaScripta1a8ae551f0cc35c2291116d7d9ff5a" src="//www.wolframalpha.com/widget/widget.jsp?id=a1a8ae551f0cc35c2291116d7d9ff5a"></script>
-								<script type="text/javascript" id="WolframAlphaScript2f1e0f79bf8e30d846b3dc75b4a0f2cf" src="//www.wolframalpha.com/widget/widget.jsp?id=2f1e0f79bf8e30d846b3dc75b4a0f2cf"></script>
-						</div>
+								</div>
 					</div>
 				</section>
 <?php endforeach;?>

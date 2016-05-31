@@ -40,7 +40,7 @@
 
 		<!-- Banner -->
 			<section id="banner">
-				<h2>Calculator</h2>
+				<h2>RESULTS</h2>
 				<p>Description</p>
 			</section>
 
@@ -48,8 +48,12 @@
       <section id="one" class="wrapper style1">
         <div class="container 75%">
           <div class="row 200%">
-        <h2><?php echo $title;?></h2>
-        <p><?php echo $tips;?></p>
+						<?php foreach ($content as $cont): ?>
+							<?php echo "<h2>".$cont->title."</h2><br/>";?>
+							<?php echo "<p>".$cont->description."</p><br/>";?>
+			        <?php echo "<h4>".$cont->tips."</h4><br/>";?>
+						<?php endforeach; ?>
+
       </div>
       </div>
       </section>

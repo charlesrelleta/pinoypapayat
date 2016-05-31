@@ -42,7 +42,7 @@ class Accounts_model extends CI_Model {
 
     public function get_all() {
         $this->db->from('accounts');
-        $this->db->order_by("user_id", "asc");
+        $this->db->order_by("_id", "asc");
         $query = $this->db->get();
         return $query->result();
     }
@@ -51,7 +51,7 @@ class Accounts_model extends CI_Model {
         $query = $this->db
                 ->select("*")
                 ->from("accounts")
-                ->where("user_id", $id)
+                ->where("_id", $id)
                 ->get();
         return $query->result();
         //	$this->db->where('serial', $id);
@@ -59,8 +59,9 @@ class Accounts_model extends CI_Model {
     }
 
     function update_record($id,  $user_data) {
-        $this->db->where('user_id', $id );
+        $this->db->where('_id', $id );
         $this->db->update('accounts', $user_data);
+        return ($this->db->affected_rows() != 1) ? false : true;
     }
 
-}
+  }
