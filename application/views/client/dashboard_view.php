@@ -29,7 +29,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<h1><strong><a href="index.html">Pinoypapayat</a></strong> by FitnessFirst</h1>
+				<h1><strong><a href="<?php echo base_url();?>Site">Pinoypapayat</a></strong> by FitnessFirst</h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="<?php echo base_url('Site'); ?>">Home</a></li>
@@ -77,15 +77,9 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-facebook"></a></li>
-						<li><a href="#" class="icon fa-twitter"></a></li>
-						<li><a href="#" class="icon fa-instagram"></a></li>
-					</ul>
+					
 					<ul class="copyright">
-						<li>&copy; Untitled</li>
-						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+						<li>&copy; Pinoypapayat</li>
 					</ul>
 				</div>
 			</footer>
