@@ -131,15 +131,22 @@
 
                                           <form name="post" method="post" action="<?php echo base_url().'admin/add_post/' ;?>" >
                                             <br/><h3 align="center" class="panel panel-success">TITLE</h3>
-                                                                <textarea name="title" rows="10" cols="80">
-                                                                </textarea><br/>
+                                                                <textarea name="title" rows="5" cols="80"></textarea><br/>
                                             <br/><h3 align="center" class="panel panel-success">DESCRIPTION</h3>
-                                                                <textarea name="description" rows="10" cols="80">
-                                                                </textarea><br/>
+                                                                <textarea name="description" rows="5" cols="80"></textarea><br/>
                                               <br/><h3 align="center" class="panel panel-success">CONTENT</h3>
-                                                                <textarea name="content" rows="10" cols="80">
-                                                                </textarea><br/>
-                                                           <div class="form-group"><button class="btn btn-danger" type="submit"> ADD </button></div>
+                                                                <textarea name="content" rows="5" cols="80"></textarea><br/><br/>
+                                              <br/><h3 align="center" class="panel panel-success">CATEGORY</h3>
+                                                                <select class="ui dropdown" name= "category"  style="height:60px; width:550px">
+                                                                  <option value="">CATEGORY</option>
+                                                                  <option value="1">BREAKFAST</option>
+                                                                  <option value="2">LUNCH</option>
+                                                                  <option value="3">DINNER</option>
+                                                                  <option value="0">OTHERS</option>
+                                                                </select>
+                                                                <br/>
+                                                                <br/>
+                                                                <div class="form-group"><button class="btn btn-danger" type="submit">_____ ADD POST _____  </button></div>
                                                             </form>
                                                         </div>
                                                     </div>

@@ -46,7 +46,7 @@ class Site extends CI_Controller {
 
 	public function tips_and_suggestions()
 	{
-		if ($query = $this->cms_model->get_posts()) {
+		if ($query = $this->cms_model->post_get_by_bfast()) {
 			$data['content'] = $query;
 		}
 
@@ -130,16 +130,15 @@ class Site extends CI_Controller {
 
 	public function goto_post(){
 			$id = $this->uri->segment(3);
-			
+
 			if ($query = $this->cms_model->post_get_by_id($id)) {
 				$data['content'] = $query;
 			}
 			$this->load->view('client/view_post', $data);
 	}
-
 	public function lunch()
 	{
-		if ($query = $this->cms_model->get_posts()) {
+		if ($query = $this->cms_model->post_get_by_lunch()) {
 			$data['content'] = $query;
 		}
 
@@ -148,7 +147,7 @@ class Site extends CI_Controller {
 
 	public function dinner()
 	{
-		if ($query = $this->cms_model->get_posts()) {
+		if ($query = $this->cms_model->post_get_by_dinner()) {
 			$data['content'] = $query;
 		}
 
@@ -158,7 +157,7 @@ class Site extends CI_Controller {
 
 	public function random()
 	{
-		if ($query = $this->cms_model->get_posts()) {
+		if ($query = $this->cms_model->post_get_by_others()) {
 			$data['content'] = $query;
 		}
 
@@ -166,5 +165,5 @@ class Site extends CI_Controller {
 	}
 
 
-	
+
 }

@@ -31,7 +31,7 @@
 	</head>
 	<body>
 
-	
+
 
 		<!-- Header -->
 			<header id="header">
@@ -53,7 +53,7 @@
 
 		<br><br>
 		<div class="sidebar-links">
-			<a class="link-yellow"><i class="fa fa-coffee"></i>Breakfast</a>
+			<a class="link-yellow" href="<?php echo base_url();?>site/tips_and_suggestions"><i class="fa fa-coffee"></i>Breakfast</a>
 			<a class="link-red" href="<?php echo base_url();?>site/lunch"><i class="fa fa-cutlery"></i>Lunch</a>
 			<a class="link-blue" href="<?php echo base_url();?>site/dinner"><i class="fa fa-moon-o"></i>Dinner</a>
 			<a class="link-green selected" href="<?php echo base_url();?>site/random"><i class="fa fa-random"></i>Random</a>

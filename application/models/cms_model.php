@@ -53,6 +53,39 @@ class Cms_model extends CI_Model {
 		//	$this->db->where('serial', $id);
 		//	return $this->db->get($this->products);
 		}
+
+    function post_get_by_bfast(){
+      $query = $this->db
+      ->select("*")
+      ->from("cms_posts")
+      ->where("category", 1)
+      ->get();
+      return $query->result();
+		}
+    function post_get_by_lunch(){
+        $query = $this->db
+        ->select("*")
+        ->from("cms_posts")
+        ->where("category", 2)
+        ->get();
+        return $query->result();
+      }
+      function post_get_by_dinner(){
+          $query = $this->db
+          ->select("*")
+          ->from("cms_posts")
+          ->where("category", 3)
+          ->get();
+          return $query->result();
+        }
+        function post_get_by_others(){
+            $query = $this->db
+            ->select("*")
+            ->from("cms_posts")
+            ->where("category", 0)
+            ->get();
+            return $query->result();
+          }
 		function add_post($cont_data){
 		  $this->db->insert('cms_posts', $cont_data);
 		}

@@ -210,6 +210,7 @@ if ($this->session->userdata('logged_in')) {
 		$this->form_validation->set_rules('title', 'Title', 'max_length[1000]|required');
 		$this->form_validation->set_rules('description', 'Description', 'max_length[2000]|required');
 		$this->form_validation->set_rules('content', 'content', 'max_length[5000]|required');
+		$this->form_validation->set_rules('category', 'Category', 'required');
 
 		if ($this->form_validation->run()){
 					date_default_timezone_set("Asia/Hong_Kong");
@@ -217,7 +218,8 @@ if ($this->session->userdata('logged_in')) {
 					$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
-					'content' =>  $this->input->post('content')
+					'content' =>  $this->input->post('content'),
+					'category' =>  $this->input->post('category')
 				);
 					$this->cms_model->add_post($data);
 					redirect("Admin/cms_posts");
