@@ -56,15 +56,7 @@
         <h5 style="color: gray;"><?php echo $cont->description; ?></h5>
         <p style="color: gray; font-family: times new roman; font-variant-caps: initial;"><?php
 				$mycontent = $cont->content;
-
-				$var = strlen($mycontent);
-if ($var >= 300) {
-	$rest = substr($mycontent, 0,300);
-	echo $rest, "... <a href='",base_url(),"site/goto_post/",$cont->_id,"' style='color:blue'>READ MORE</a>";
-}else {
-	echo $mycontent;
-}
-
+        echo $mycontent;
 				 ?></p>
       </article>
       <?php endforeach;}

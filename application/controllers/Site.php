@@ -110,12 +110,7 @@ class Site extends CI_Controller {
 			$this->check_bmi($result1);
 
 			}
-	}
-
-
-
-
-		//$this->load->view('client/bmi_result');
+		}		//$this->load->view('client/bmi_result');
 	}
   public function metric_result()
 	{
@@ -130,9 +125,16 @@ class Site extends CI_Controller {
 	    $result = $kg / $meters;
 	    $this->check_bmi($result);
 		}
-
 		//$this->load->view('client/bmi_result');
 	}
 
+	public function goto_post(){
+			$id = $this->uri->segment(3);
+			echo $id;
+			if ($query = $this->cms_model->post_get_by_id($id)) {
+				$data['content'] = $query;
+			}
+			$this->load->view('client/view_post', $data);
+	}
 
 }
