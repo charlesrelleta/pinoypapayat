@@ -130,11 +130,41 @@ class Site extends CI_Controller {
 
 	public function goto_post(){
 			$id = $this->uri->segment(3);
-			echo $id;
+			
 			if ($query = $this->cms_model->post_get_by_id($id)) {
 				$data['content'] = $query;
 			}
 			$this->load->view('client/view_post', $data);
 	}
 
+	public function lunch()
+	{
+		if ($query = $this->cms_model->get_posts()) {
+			$data['content'] = $query;
+		}
+
+		$this->load->view('client/lunch_view', $data);
+	}
+
+	public function dinner()
+	{
+		if ($query = $this->cms_model->get_posts()) {
+			$data['content'] = $query;
+		}
+
+		$this->load->view('client/dinner_view', $data);
+	}
+
+
+	public function random()
+	{
+		if ($query = $this->cms_model->get_posts()) {
+			$data['content'] = $query;
+		}
+
+		$this->load->view('client/random_view', $data);
+	}
+
+
+	
 }

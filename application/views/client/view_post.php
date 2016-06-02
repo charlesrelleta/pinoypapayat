@@ -18,7 +18,6 @@
 		<script src="<?php echo base_url();?>js/init.js"></script>
 		<script src="<?php echo base_url();?>js/pinterest.js"></script>
 
-		<link type="text/css" rel="stylesheet"  href="<?php echo base_url();?>css/skel.css" />
 		<link type="text/css" rel="stylesheet"  href="<?php echo base_url();?>css/style.css" />
 		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/style-xlarge.css"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/style-pinterest.css" rel="stylesheet">
@@ -40,20 +39,24 @@
 					</ul>
 				</nav>
 			</header>
-
+			<?php if(isset($content)){
+              foreach($content as $cont): ?>
+<section class="wrapper" style="background: white;"><h3 align="center"><?php echo $cont->title;?></h3>
+<h5 align="center" style="color: gray;"><?php echo $cont->description; ?></h5>
+<h6 align="center" style="color: gray;">Tips &#38; Suggestions</h6>
+</section>
 		<!-- Main -->
 			<section id="main" class="wrapper">
 			<div class="container">
 			<div class="row">
 
 <br>
-    <h3>Tips &#38; Suggestions</h3>
-    <section id="pinBoot">
-    	<?php if(isset($content)){
-              foreach($content as $cont): ?>
-      <article class="white-panel">
-        <h4><?php echo $cont->title;?></h4>
-        <h5 style="color: gray;"><?php echo $cont->description; ?></h5>
+
+    
+    <section id="">
+    	
+      <article class="">
+        
         <p style="color: gray; font-family: times new roman; font-variant-caps: initial;"><?php
 				$mycontent = $cont->content;
         echo $mycontent;
