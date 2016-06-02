@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <!--
 	Spatial by TEMPLATED
@@ -6,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title>Pinoy Papayat</title>
+		<title>Pinoypapayat</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -16,17 +17,16 @@
 		<script src="<?php echo base_url();?>js/skel-layers.min.js"></script>
 		<script src="<?php echo base_url();?>js/init.js"></script>
 
-			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/skel.css" />
-			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style.css" />
-			<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style-xlarge.css" />
-
+		<link type="text/css" rel="stylesheet"  href="<?php echo base_url();?>css/skel.css" />
+		<link type="text/css" rel="stylesheet"  href="<?php echo base_url();?>css/style.css" />
+		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/style-xlarge.css"/>
 
 	</head>
-	<body class="landing">
+	<body>
 
 		<!-- Header -->
-			<header id="header" class="alt">
-				<h1><strong><a href="<?php echo base_url();?>Site">PinoyPapayat</a></strong> by FitnessFirst</h1>
+			<header id="header">
+				<h1><strong><a href="<?php echo base_url();?>Site">Pinoypapayat</a></strong> by FitnessFirst</h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="<?php echo base_url('Site'); ?>">Home</a></li>
@@ -34,55 +34,57 @@
 						<li><a href="<?php echo base_url('Site/bmi_calculator'); ?>">BMI Calculator</a></li>
 						<li><a href="<?php echo base_url('Site/tips_and_suggestions'); ?>">Tips and Suggestions</a></li>
 						<li><a href="<?php echo base_url('Site/contact'); ?>">Contact us</a></li>
-
 					</ul>
 				</nav>
 			</header>
 
-		<!-- Banner -->
-			<section id="banner">
-				<h2>RESULTS</h2>
-				<p>Scroll Down for more Infos</p>
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<section id="one" class="wrapper style2">
+	        <div class="container 75%">
+	          <div class="row 200%">
+							<?php foreach ($content as $cont): ?>
+								<?php echo "<h2>".$cont->title."</h2><br/>";?>
+								<?php echo "<p>".$cont->description."</p><br/>";?>
+				        <?php echo "<b><p>".$cont->tips."</p></b><br/>";?>
+							<?php endforeach; ?>
+
+	      		</div>
+		      </div>
+	      </section>
+
+	      <section id="one" class="wrapper style1">
+	        <div class="container 75%">
+	          <div class="">
+							<center>
+	    			<h3>BMI Chart</h3>
+	    		<img src="<?php echo base_url();?>images/bmi_chart.png">
+	    		</center>
+
+	      		</div>
+		      </div>
+	      </section>
+
+
+
+
+
+
+				</div>
+
 			</section>
-
-
-      <section id="one" class="wrapper style2">
-        <div class="container 75%">
-          <div class="row 200%">
-						<?php foreach ($content as $cont): ?>
-							<?php echo "<h2>".$cont->title."</h2><br/>";?>
-							<?php echo "<p>".$cont->description."</p><br/>";?>
-			        <?php echo "<h4>".$cont->tips."</h4><br/>";?>
-						<?php endforeach; ?>
-
-      		</div>
-	      </div>
-      </section>
-
-      <section id="one" class="wrapper style1">
-        <div class="container 75%">
-          <div class="">
-						<center>
-    			<h3>BMI Chart</h3>
-    		<img src="<?php echo base_url();?>images/bmi_chart.png">
-    		</center>
-
-      		</div>
-	      </div>
-      </section>
-
-      
-
-
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-					
+
 					<ul class="copyright">
 						<li>&copy; Pinoypapayat</li>
 					</ul>
 				</div>
 			</footer>
+
 	</body>
 </html>

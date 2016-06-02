@@ -10,10 +10,17 @@ class Admin extends CI_Controller {
 	}
 	public function index()
 	{
+		if ($this->session->userdata('logged_in')) {
+			$this->accounts_management();
+		}else {
 		$this->load->view('administrator/login_view');
 	}
+}
 
 	public function login(){
+		if ($this->session->userdata('logged_in')) {
+			$this->accounts_management();
+		}else {
 			$this->form_validation->set_rules('username', 'Username', 'required');
 			$this->form_validation->set_rules('password', 'Password', 'trim|xss_clean|required|callback_password_check');
 			if ($this->form_validation->run()){
@@ -21,6 +28,8 @@ class Admin extends CI_Controller {
 			}else{
 					$this->load->view('administrator/login_view');
 			}
+		}
+
 	}
 	public function logout(){
 		$this->session->sess_destroy();
@@ -47,11 +56,19 @@ class Admin extends CI_Controller {
 	}
 
 	public function profile(){
+		if ($this->session->userdata('logged_in')) {
 		$this->load->view('administrator/profile');
+	}else {
+		$this->login();
 	}
+}
 
 	public function dashboard(){
+		if ($this->session->userdata('logged_in')) {
 		$this->load->view('administrator/dashboard_view');
+		}else {
+			$this->login();
+		}
 	}
 
 	public function accounts_management()

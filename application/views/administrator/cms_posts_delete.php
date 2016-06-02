@@ -147,7 +147,7 @@
                                                            <div class="form-group"><button class="btn btn-danger" type="submit"> DELETE </button></div>
                                                             </form>
                                                                 <?php endforeach;?>
-                                                                <td><a class="btn btn-danger" href="<?php echo base_url()."admin/cms_posts";?>" role="button">CANCEL</a></td>
+                                                                <a class="btn btn-danger" href="<?php echo base_url()."admin/cms_posts";?>" role="button">CANCEL</a>
 
                                                         </div>
                                                     </div>

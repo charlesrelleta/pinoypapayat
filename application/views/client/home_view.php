@@ -56,14 +56,18 @@
 
 								<?php echo $cont->post_description;?>
 								</div>
+								<br>
+								<a href="#" class="image fit"><img src="<?php echo base_url();?>images/pic09.jpg" alt="" /></a>
 					</div>
 				</section>
+
+
 <?php endforeach;?>
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-					
+
 					<ul class="copyright">
 						<li>&copy; Pinoypapayat</li>
 					</ul>

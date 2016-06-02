@@ -45,16 +45,12 @@
           <?php foreach($content as $cont): ?>
 
 
-
-
-
-
 					<header class="major special">
 						<h2><?php echo $cont->title;?></h2>
-						<p><?php echo $cont->description;?></p>
+						<p><h5><?php echo $cont->description;?></h5></p>
 					</header>
 
-					<a href="#" class="image fit"><img src="<?php echo base_url();?>images/pic01.jpg" alt="" /></a>
+					<a href="#" class="image fit"><img src="<?php echo base_url();?>images/pic08.jpg" alt="" /></a>
 					  <?php echo $cont->content;?>
 				</div>
           <?php endforeach;?>
@@ -63,7 +59,7 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-					
+
 					<ul class="copyright">
 						<li>&copy; Pinoypapayat</li>
 					</ul>

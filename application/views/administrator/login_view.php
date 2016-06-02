@@ -27,9 +27,11 @@
 			<input type="text"     name="username" placeholder="Username">
 			<input type="password" name="password" placeholder="Password">
 			<button type="submit" id="button">Login</button>
+<br/></br>
+    <a class="button" href="<?php echo base_url()."site/register";?>" role="button">Register</a><br/><br/>
+    <a class="button" href="<?php echo base_url()."site/";?>" role="button">Back to Site</a>
 		</form>
 	</div>
-
 	<ul class="bg-bubbles">
 		<li></li>
 		<li></li>

@@ -94,10 +94,26 @@ class Site extends CI_Controller {
     $ft =  $this->input->get('foot');
     $inch =  $this->input->get('inch');
 
-    $inches = ($ft * 12) + $inch;
-    $inch2 = $inches * $inches;
-    $result1 = ($lbs /$inch2) * 703;
-    $this->check_bmi($result1);
+		if($ft<=0){
+
+			$err = array('error' => "Invalid Input. Must not Contain Negative Numbers or 0" );
+			$this->load->view('client/bmi_calculator', $err);
+		}else {
+			$inches = ($ft * 12) + $inch;
+			$inch2 = $inches * $inches;
+			if($lbs<=0){
+
+					$err = array('error' => "Invalid Input. Must not Contain Negative Numbers or 0" );
+					$this->load->view('client/bmi_calculator', $err);
+		}else {
+			$result1 = ($lbs /$inch2) * 703;
+			$this->check_bmi($result1);
+
+			}
+	}
+
+
+
 
 		//$this->load->view('client/bmi_result');
 	}
@@ -105,9 +121,16 @@ class Site extends CI_Controller {
 	{
     $kg = $this->input->get('kilogram');
     $m =  $this->input->get('meters');
-    $meters =  $m * $m;
-    $result = $kg / $meters;
-    $this->check_bmi($result);
+		if($kg<=0 || $m<=0){
+
+						$err = array('error' => "Invalid Input. Must not Contain Negative Numbers or 0" );
+						$this->load->view('client/bmi_calculator', $err);
+		}else {
+			$meters =  $m * $m;
+	    $result = $kg / $meters;
+	    $this->check_bmi($result);
+		}
+
 		//$this->load->view('client/bmi_result');
 	}
 

@@ -45,15 +45,15 @@
 			<section id="main" class="wrapper">
 			<div class="container">
 			<div class="row">
-    
 
+<br>
     <h3>Tips &#38; Suggestions</h3>
     <section id="pinBoot">
     	<?php if(isset($content)){
               foreach($content as $cont): ?>
-      <article class="white-panel"><img src="<?php echo base_url();?>images/pic06.jpg" alt="">
+      <article class="white-panel">
         <h4><?php echo $cont->title;?></h4>
-        <h5 style="color: gray;"><?php echo $cont->description; ?></h5> 
+        <h5 style="color: gray;"><?php echo $cont->description; ?></h5>
         <p style="color: gray; font-family: times new roman; font-variant-caps: initial;"><?php echo $cont->content; ?></p>
       </article>
       <?php endforeach;}
@@ -61,7 +61,7 @@
                  <script> alert("Empty!");</script>
                   <?php }?>
 
-      
+
     </section>
 
 
@@ -77,7 +77,7 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-					
+
 					<ul class="copyright">
 						<li>&copy; Pinoypapayat</li>
 					</ul>
