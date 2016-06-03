@@ -49,24 +49,31 @@
 
 			<div class="main-content">
 
+
 			<aside class="sidebar-left">
 
 		<br><br>
 		<div class="sidebar-links">
 			<a class="link-yellow selected"  href="<?php echo base_url();?>site/tips_and_suggestions"><i class="fa fa-coffee"></i>Interesting Facts</a>
-			<a class="link-red" href="<?php echo base_url();?>site/lunch"><i class="fa fa-cutlery"></i>Lifestyle</a>
-			<a class="link-blue" href="<?php echo base_url();?>site/dinner"><i class="fa fa-moon-o"></i>Food</a>
+			<a class="link-red" href="<?php echo base_url();?>site/lunch"><i class="fa fa-sun-o"></i>Lifestyle</a>
+			<a class="link-blue" href="<?php echo base_url();?>site/dinner"><i class="fa fa-cutlery"></i>Food</a>
 			<a class="link-green" href="<?php echo base_url();?>site/random"><i class="fa fa-random"></i>Random</a>
 		</div>
 
 	</aside>
 
+			
 
     <h3 align="center">Tips &#38; Suggestions</h3>
+    <img src="<?php echo base_url();?>images/banner_food4.jpg">
 		<!-- Main -->
 			<section id="main" class="wrapper">
+
 			<div class="container">
+
 			<div class="row">
+
+
 
     <section id="pinBoot">
     	<?php if(isset($content)){
