@@ -139,9 +139,9 @@
                                               <br/><h3 align="center" class="panel panel-success">CATEGORY</h3>
                                                                 <select class="ui dropdown" name= "category"  style="height:60px; width:550px">
                                                                   <option value="">CATEGORY</option>
-                                                                  <option value="1">BREAKFAST</option>
-                                                                  <option value="2">LUNCH</option>
-                                                                  <option value="3">DINNER</option>
+                                                                  <option value="1">INTERESTING FACTS</option>
+                                                                  <option value="2">LIFESTYLE</option>
+                                                                  <option value="3">FOOD</option>
                                                                   <option value="0">OTHERS</option>
                                                                 </select>
                                                                 <br/>
