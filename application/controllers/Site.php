@@ -85,6 +85,7 @@ class Site extends CI_Controller {
 				$data['content'] = $query;
 			}
     }
+		$data['bmi_result'] =$bmi_result;
 		$this->load->view('client/bmi_result',$data);
   }
 

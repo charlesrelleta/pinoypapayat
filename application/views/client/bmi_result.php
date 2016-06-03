@@ -23,7 +23,6 @@
 
 	</head>
 	<body>
-
 		<!-- Header -->
 			<header id="header">
 				<h1><strong><a href="<?php echo base_url();?>Site">Pinoypapayat</a></strong> by FitnessFirst</h1>
@@ -39,6 +38,24 @@
 			</header>
 
 		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="container">
+
+				<section id="one" class="wrapper style2">
+				<div class="container 75%">
+					<div class="row 200%">
+						<h2>	Your Body Mass Index is <?php $bmi =  round($bmi_result,2); echo $bmi?></h2>
+						<br/><br/>
+				    <img src="<?php echo base_url();?>images/bmi.jpg" name="chart">
+<br/><br/><br/><br/><br/><br/><br/><br/>
+						<h1>~Asian BMI Chart</h1>
+<br/><br/>
+
+						All anthropometric data (height in meters and weight in kilograms) were extracted from the clinical nutrition database of St. Luke’s Medical Center, Quezon City, Philippines, which was a Microsoft Access© 2000 program, covering the period from years 2000 to 2003 (Phase 1) and the second period from the years 2006 to 2007 (Phase 2). For comparison purposes the database of the Weight Management Center was also included. These were then converted to BMI and grouped to their corresponding nutritional status using the WHO criteria and “Asian Criteria” (Table 1).
+The collected values were plotted to form a graph using the Microsoft Excel© 2000 and the graph patterns of the years 2000 to 2003, years 2006 to 2007, and Weight Management Center were analyzed as to which of the two criteria comes up with the normal “bell shaped” curve or pattern depicting the “normal” population distribution [10]. A normal distribution of a given population has the following characteristics: an inverted “bell-shaped” pattern, symmetrical pattern for the 95% portion under the curve and 5% portion on both ends of the curve. If there is a preponderance of overweight/obese patients (or bigger values) compared to the underweights (or smaller values) i.e. the mean is greater than the median, the curve would be “skewed to the right” and if there were more underweight patients (or lesser values) compared to the overweight/obese (or bigger values) i.e. the mean is smaller than the median, then the curve would be “skewed to the left”. This pattern is reflective of an appropriate assignment of “cut- off” values. If the values show a pattern that is not of an inverted bell (or symmetrical pattern) then it means the assigned “cut- off” values are not appropriate.
+					</div>
+				</div>
+			</section>
 			<section id="main" class="wrapper">
 				<div class="container">
 

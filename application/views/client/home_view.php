@@ -63,6 +63,21 @@
 
 
 <?php endforeach;?>
+<section id="one" class="wrapper style1">
+	<div class="container 75%">
+		<div class="row 200%">
+
+				<p class="major">
+					Norma O. Chikiamco wrote in the Philippine Daily Inquirer, “I feel disheartened every time I hear people extol the virtues of Asian cuisine. Most likely they'd be referring to Japanese, Thai, Vietnamese, Indonesian or Chinese food; just as likely there won't be any mention of Filipino food. As if it isn't hard enough being called the Sad Sack of Asia, they have to snub our cuisine too. Is Filipino food meant to be loved by no one else but us? Source: Norma O. Chikiamco, Philippine Daily Inquirer, July 6, 2008
+
+				</p>
+
+				</div>
+				<br>
+	</div>
+</section>
+
+
 
 		<!-- Footer -->
 			<footer id="footer">
