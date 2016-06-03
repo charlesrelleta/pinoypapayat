@@ -60,9 +60,10 @@
 		</div>
 
 	</aside>
-
-
-    <h3 align="center">Tips &#38; Suggestions</h3>
+  <center><div  style="width:1100px;" class="container">
+  <img  src="<?php echo base_url();?>images/banner_food2.jpg"> <BR>
+  <h3>Tips &#38; Suggestions</h3>
+  </div></center>
 		<!-- Main -->
 			<section id="main" class="wrapper">
 			<div class="container">
