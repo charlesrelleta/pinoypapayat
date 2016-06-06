@@ -117,14 +117,11 @@
 
                 <!-- Page Heading -->
                 <div class="row">
-                  <div class="col-lg-12">
+                  <div class="col-lg-10">
                     <h1 class="page-header"> User Accounts </h1>
                       <div class="panel panel-default">
                         <!-- Default panel contents -->
-                        <div class="panel-heading">Panel heading</div>
-                          <div class="panel-body">
-                            <p>...</p>
-                          </div>
+                        
                             <!-- Table -->
                           <table class="table table-bordered table-hover">
                           <tr>
@@ -135,7 +132,7 @@
                                 <th>GENDER</th>
                                 <th>EMAIL</th>
                                 <th>PROFESSION</th>
-                                <th>ACTION</th>
+                                <th>STATUS</th>
                                 <th>ACTION</th>
                           </tr>
                           <?php

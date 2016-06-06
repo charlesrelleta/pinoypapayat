@@ -45,13 +45,18 @@
           <?php foreach($content as $cont): ?>
 
 
-					<header class="major special">
-						<h2><?php echo $cont->title;?></h2>
-						<p><h5><?php echo $cont->description;?></h5></p>
-					</header>
-
-					<a href="#" class="image fit"><img src="<?php echo base_url();?>images/pic08.jpg" alt="" /></a>
-					  <?php echo $cont->content;?>
+					
+                                            
+                                    <center><h2><?php echo $cont->title;?></h2></center>
+						
+                                  
+<?php echo $cont->description;?>  <br>
+					<a href="#" class="image fit"><img src="<?php echo base_url();?>images/tip1.jpg" alt="" /></a>
+					  
+                                            <?php echo $cont->content;?>
+                                        <button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+</button>
 				</div>
           <?php endforeach;?>
 			</section>

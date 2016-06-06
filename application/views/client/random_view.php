@@ -1,139 +1,140 @@
 
 <!DOCTYPE HTML>
 <!--
-	Spatial by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+        Spatial by TEMPLATED
+        templated.co @templatedco
+        Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-	<head>
-		<title>Pinoypapayat</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="<?php echo base_url();?>js/jquery.min.js"></script>
-		<script src="<?php echo base_url();?>js/skel.min.js"></script>
-		<script src="<?php echo base_url();?>js/skel-layers.min.js"></script>
-		<script src="<?php echo base_url();?>js/init.js"></script>
-		<script src="<?php echo base_url();?>js/pinterest.js"></script>
+    <head>
+        <title>Pinoypapayat</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/skel.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/skel-layers.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/init.js"></script>
+        <script src="<?php echo base_url(); ?>js/pinterest.js"></script>
 
-		<link type="text/css" rel="stylesheet"  href="<?php echo base_url();?>css/style.css" />
-		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/style-xlarge.css"/>
-		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/style-pinterest.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet"  href="<?php echo base_url(); ?>css/style.css" />
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>css/style-xlarge.css"/>
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>css/style-pinterest.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="<?php echo base_url();?>css/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>css/font-awesome.min.css">
 
-		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/demo.css">
-		<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/sidebar-left.css">
-
-
-	</head>
-	<body>
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>css/demo.css">
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>css/sidebar-left.css">
 
 
-
-		<!-- Header -->
-			<header id="header">
-				<h1><strong><a href="<?php echo base_url();?>Site">Pinoypapayat</a></strong> by FitnessFirst</h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="<?php echo base_url('Site'); ?>">Home</a></li>
-						<li><a href="<?php echo base_url('Site/about'); ?>">About us</a></li>
-						<li><a href="<?php echo base_url('Site/bmi_calculator'); ?>">BMI Calculator</a></li>
-						<li><a href="<?php echo base_url('Site/tips_and_suggestions'); ?>">Tips and Suggestions</a></li>
-						<li><a href="<?php echo base_url('Site/contact'); ?>">Contact us</a></li>
-					</ul>
-				</nav>
-			</header>
-
-			<div class="main-content">
-
-			<aside class="sidebar-left">
-
-		<br><br>
-		<div class="sidebar-links">
-			<a class="link-yellow"  href="<?php echo base_url();?>site/tips_and_suggestions"><i class="fa fa-coffee"></i>Interesting Facts</a>
-			<a class="link-red" href="<?php echo base_url();?>site/lunch"><i class="fa fa-sun-o"></i>Lifestyle</a>
-			<a class="link-blue" href="<?php echo base_url();?>site/dinner"><i class="fa fa-cutlery"></i>Food</a>
-			<a class="link-green selected" href="<?php echo base_url();?>site/random"><i class="fa fa-random"></i>Random</a>
-		</div>
-
-	</aside>
-
-	<center><div  style="width:1100px;" class="container">
-<img  src="<?php echo base_url();?>images/banner_food.jpg"> <BR>
-<h3>Tips &#38; Suggestions</h3>
-  </div></center>
-
-		<!-- Main -->
-			<section id="main" class="wrapper">
-			<div class="container">
-			<div class="row">
-
-    <section id="pinBoot">
-    	<?php if(isset($content)){
-              foreach($content as $cont): ?>
-      <article class="white-panel">
-        <h4><?php echo $cont->title;?></h4>
-        <h5 style="color: gray;"><?php echo $cont->description; ?></h5>
-        <p style="color: gray; font-family: times new roman; font-variant-caps: initial;"><?php
-				$mycontent = $cont->content;
-
-				$var = strlen($mycontent);
-if ($var >= 300) {
-	$rest = substr($mycontent, 0,300);
-	echo $rest, "... <a href='",base_url(),"site/goto_post/",$cont->_id,"' style='color:blue'>READ MORE</a>";
-}else {
-	echo $mycontent;
-}
-
-				 ?></p>
-      </article>
-      <?php endforeach;}
-                 else { ?>
-                 <script> alert("Empty!");</script>
-                  <?php }?>
+    </head>
+    <body>
 
 
-    </section>
+
+        <!-- Header -->
+        <header id="header">
+            <h1><strong><a href="<?php echo base_url(); ?>Site">Pinoypapayat</a></strong> by FitnessFirst</h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="<?php echo base_url('Site'); ?>">Home</a></li>
+                    <li><a href="<?php echo base_url('Site/about'); ?>">About us</a></li>
+                    <li><a href="<?php echo base_url('Site/bmi_calculator'); ?>">BMI Calculator</a></li>
+                    <li><a href="<?php echo base_url('Site/tips_and_suggestions'); ?>">Tips and Suggestions</a></li>
+                    <li><a href="<?php echo base_url('Site/contact'); ?>">Contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main-content">
+
+            <aside class="sidebar-left">
+
+                <br><br>
+                <div class="sidebar-links">
+                    <a class="link-yellow"  href="<?php echo base_url(); ?>site/tips_and_suggestions"><i class="fa fa-coffee"></i>Interesting Facts</a>
+                    <a class="link-red" href="<?php echo base_url(); ?>site/lunch"><i class="fa fa-sun-o"></i>Lifestyle</a>
+                    <a class="link-blue" href="<?php echo base_url(); ?>site/dinner"><i class="fa fa-cutlery"></i>Food</a>
+                    <a class="link-green selected" href="<?php echo base_url(); ?>site/random"><i class="fa fa-random"></i>Random</a>
+                </div>
+
+            </aside>
+
+            <center><div  style="width:1100px;" class="container">
+                    <img  src="<?php echo base_url(); ?>images/banner1.png"> <BR>
+                    <h3>Tips &#38; Suggestions</h3>
+                </div></center>
+
+            <!-- Main -->
+            <section id="main" class="wrapper">
+                <div class="container">
+                    <div class="row">
+
+                        <section id="pinBoot">
+                            <?php if (isset($content)) {
+                                foreach ($content as $cont):
+                                    ?>
+                                    <article class="white-panel">
+                                        <h4><?php echo $cont->title; ?></h4>
+                                        <h5 style="color: gray;"><?php echo $cont->description; ?></h5>
+                                        <p style="color: gray; font-family: times new roman; font-variant-caps: initial;"><?php
+                                            $mycontent = $cont->content;
+
+                                            $var = strlen($mycontent);
+                                            if ($var >= 300) {
+                                                $rest = substr($mycontent, 0, 300);
+                                                echo $rest, "... <a href='", base_url(), "site/goto_post/", $cont->_id, "' style='color:blue'>READ MORE</a>";
+                                            } else {
+                                                echo $mycontent;
+                                            }
+                                            ?></p>
+                                    </article>
+                                <?php endforeach;
+                            } else {
+                                ?>
+                                <script> alert("Empty!");</script>
+<?php } ?>
 
 
-    <hr>
+                        </section>
 
+
+                        <hr>
+
+                    </div>
+
+
+                </div>
+
+        </div>
     </div>
+</section>
 
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
 
-  </div>
+        <ul class="copyright">
+            <li>&copy; Pinoypapayat</li>
+        </ul>
+    </div>
+</footer>
+<script>
 
-</div>
-			</div>
-			</section>
+    $(function () {
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
+        var links = $('.sidebar-links > a');
 
-					<ul class="copyright">
-						<li>&copy; Pinoypapayat</li>
-					</ul>
-				</div>
-			</footer>
-	<script>
+        links.on('click', function () {
 
-		$(function () {
+            links.removeClass('selected');
+            $(this).addClass('selected');
 
-			var links = $('.sidebar-links > a');
+        })
+    });
 
-			links.on('click', function () {
+</script>
 
-				links.removeClass('selected');
-				$(this).addClass('selected');
-
-			})
-		});
-
-	</script>
-
-	</body>
+</body>
 </html>

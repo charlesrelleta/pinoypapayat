@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Pinoypapat</a>
+                <a class="navbar-brand" href="index.html">Pinoypapayat</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -104,16 +104,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Tables
+                            Contacts CMS
                         </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-table"></i> Tables
-                            </li>
-                        </ol>
+                      
                     </div>
                 </div>
                 <!-- /.row -->
@@ -123,9 +116,9 @@
                           <div class="text-center wowload " style=" padding-left: 10.0em; padding-right: 10.0em">
                               <div>
                                   <div class="panel-heading"><br>
-                                    <h2 align="center" class="glyphicon glyphicon-shopping-cart"> About page Content</h2></div>
+                                   </div>
                                       <div class="panel-body">
-                                        <?php echo validation_errors(); ?>
+                                       
                                         <?php foreach($content as $cont): ?>
                                           <form name="about" method="post" action="<?php echo base_url().'admin/update_contacts/' ?>" >
 
